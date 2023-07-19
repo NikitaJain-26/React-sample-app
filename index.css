@@ -1,3 +1,198 @@
-#heading {
-    color: aquamarine;
+.header {
+    border: 1px solid #000;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 0 0.5rem;
+    display: flex;
+}
+
+.logo-container {
+    display: flex;
+}
+
+.app-heading {
+    margin: 1rem 1rem;
+}
+
+.logo {
+    width: 4rem;
+    height: 3rem;
+    margin-top: 0.4rem;
+}
+
+.userIcon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-top: 0.2rem;
+    margin-left: 0.2rem;
+}
+
+.userIcon:hover {
+    cursor: pointer;
+}
+
+.inputSearch {
+    height: 2rem;
+    margin: 0rem 1rem;
+}
+
+.nav-conatiner {
+    display: flex;
+}
+
+.nav-conatiner>ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-conatiner>ul>li {
+    margin: 0.4rem;
+    font-size: 1rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 17.2rem;
+    padding: 0.5rem 0rem 0.5rem 1rem;
+    background-color: #d7d6d68a;
+    margin: 1rem 0.5rem 0.5rem 0rem;
+
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 5px 0px rgba(186, 177, 186, 1);
+}
+
+.resImage {
+    width: 16.5rem;
+}
+
+.resHeading {
+    margin: 0.5rem 0rem;
+}
+
+.res-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 1rem 0.5rem 0rem;
+}
+
+.filter-btn {
+    margin: 1rem;
+}
+
+.logout-btn {
+    height: 2rem;
+    margin-top: 1rem;
+}
+
+.shimmerUi-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmerUi-container .card {
+    height: 15rem;
+}
+
+.resList {
+    text-decoration: none;
+    color: black;
+}
+
+.itemCard {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0rem;
+    border-bottom: solid 1px lightgray;
+}
+
+.itemCard:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 5px 0px rgba(186, 177, 186, 1);
+}
+
+.item-img {
+    width: 6rem;
+    height: 6rem;
+    margin-right: 1rem;
+}
+
+.item-container {
+    margin-left: 1rem;
+}
+
+.description {
+    width: 50rem;
+    margin: 0.2rem 0rem;
+    font-size: 12px;
+    color: gray;
+}
+
+.item-heading {
+    margin: 0.5rem 0rem
+}
+
+.btn-img {
+    display: flex;
+    align-items: center;
+}
+
+.add-btn {
+    height: 1.8rem;
+    margin-right: 1rem;
+}
+
+.offers-container {
+    display: flex;
+    margin-left: 1rem;
+}
+
+.offer-heading-continer {
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    align-items: center;
+    color: #575454;
+
+}
+
+.offer-div {
+    border: 1px solid gray;
+    padding: 0.5rem;
+    margin-right: 0.4rem;
+    border-radius: 0.4rem;
+}
+
+.offer-div:hover {
+    cursor: pointer;
+}
+
+.offer-description {
+    color: #938e8e;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.offer-icon {
+    margin-right: 0.3rem;
+}
+
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2rem;
+}
+
+.accordion-heading {
+    margin-bottom: 0rem;
+}
+
+.accordion-item:hover {
+    cursor: pointer;
 }

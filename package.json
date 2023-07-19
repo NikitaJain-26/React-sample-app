@@ -1,0 +1,34 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "react-sample-app",
+  "source": "index.html",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikitaJain-26/React-sample-app.git"
+  },
+  "author": "Nikita Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikitaJain-26/React-sample-app/issues"
+  },
+  "homepage": "https://github.com/NikitaJain-26/React-sample-app#readme",
+  "devDependencies": {
+    "parcel": "^2.9.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "react-router-dom": "^6.14.1"
+  },
+  "browsersList": [
+    "last 2 versions"
+  ]
+}
