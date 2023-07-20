@@ -190,9 +190,56 @@
 }
 
 .accordion-heading {
-    margin-bottom: 0rem;
+    margin: 0.8rem 0rem;
 }
 
 .accordion-item:hover {
     cursor: pointer;
+    box-shadow: 3px 3px 5px 0px rgba(186, 177, 186, 1);
+}
+
+.res-info-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0rem;
+    margin: 0.8rem 1rem;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid rgb(192, 189, 189);
+}
+
+.res-heading {
+    margin: 0.3rem 0rem;
+}
+
+.res-cuisines {
+    font-size: 13px;
+    color: gray;
+    padding-bottom: 0.2rem;
+}
+
+.res-rating {
+    margin: 0.3rem 0rem;
+    border: 1px solid rgb(192, 189, 189);
+    border-radius: 0.6rem;
+}
+
+.avg-rating {
+    color: green;
+    font-weight: bold;
+    padding: 0.6rem 2rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.total-avg-rating {
+    font-size: 11px;
+    color: gray;
+    padding: 0.3rem 1rem;
+    font-weight: bold;
+}
+
+.cost-div {
+    margin: 0rem 1rem;
+    font-weight: bolder;
+    color: #484545;
+    padding: 0rem 0rem 1rem 0rem;
 }

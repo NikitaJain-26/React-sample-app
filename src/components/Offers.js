@@ -2,19 +2,16 @@ import { OFFER_ICON } from "../utils/constant";
 
 const Offers = (props) => {
   // const info = props.offer.info;
-  // const [header, couponCode, description] = info;
+  const { header, couponCode, description, offerLogo } = props.offer.info;
   return (
     <>
       <div className="offer-div">
         <div className="offer-heading-continer">
-          <img
-            className="offer-icon"
-            src={OFFER_ICON + props.offer.info.offerLogo}
-          />
-          <div>{props.offer.info.header}</div>
+          <img className="offer-icon" src={OFFER_ICON + offerLogo} />
+          <div>{header}</div>
         </div>
         <div className="offer-description">
-          {props.offer.info.couponCode} | {props.offer.info.description}
+          {couponCode} | {description}
         </div>
       </div>
     </>

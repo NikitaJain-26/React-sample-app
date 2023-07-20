@@ -4,10 +4,11 @@ import { useParams } from "react-router-dom";
 import Accordion from "./Accordion";
 import Offers from "./Offers";
 import Item from "./Item";
+import RestaurantInfo from "./RestaurantInfo";
 
 const RestaurantDetails = () => {
   const { restaurantId } = useParams();
-  const [resDetails, setResDetails] = useState([]);
+  const [resDetails, setResDetails] = useState(null);
   const [offers, setOffers] = useState([]);
   const [recommended, setRecommended] = useState([]);
 
@@ -20,14 +21,16 @@ const RestaurantDetails = () => {
     const jsonData = await data.json();
     const resDetail =
       jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
-    setResDetails(resDetail);
+    setResDetails(jsonData?.data?.cards[0]?.card?.card?.info);
     setOffers(
       jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.offers
     );
     setRecommended(resDetail);
   };
+
   return (
     <>
+      {resDetails == null ? null : <RestaurantInfo resInfo={resDetails} />}
       {offers.length <= 0 ? null : (
         <div className="offers-container">
           {offers.map((offer) => {
