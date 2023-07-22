@@ -26,29 +26,53 @@ const RestaurantDetails = () => {
         {recommended.length <= 0
           ? null
           : recommended.map((card, index) => {
-              return (
-                <div key={index} className="item-container">
-                  <Accordion
-                    title={
-                      card.card.card.hasOwnProperty("title")
-                        ? card.card.card.title
-                        : null
-                    }
-                    content={
-                      card.card.card.hasOwnProperty("itemCards")
-                        ? card?.card?.card?.itemCards.map((item) => {
+              if (
+                card.card.card.hasOwnProperty("title") &&
+                card.card.card.title != null &&
+                card.card.card.hasOwnProperty("itemCards")
+              )
+                return (
+                  <div key={index} className="item-container">
+                    <Accordion
+                      title={card.card.card.title}
+                      content={card?.card?.card?.itemCards.map((item) => {
+                        return (
+                          <Item key={item.card.info.id} card={item.card.info} />
+                        );
+                      })}
+                    />
+                  </div>
+                );
+            })}
+      </div>
+      <div>
+        {recommended.length <= 0
+          ? null
+          : recommended.map((card, index) => {
+              if (
+                card.card.card.hasOwnProperty("title") &&
+                card.card.card.hasOwnProperty("categories")
+              )
+                return (
+                  <div key={index} className="item-container">
+                    {card?.card?.card?.categories.map((category, index) => {
+                      return (
+                        <Accordion
+                          key={index}
+                          title={category?.title}
+                          content={category?.itemCards.map((item) => {
                             return (
                               <Item
                                 key={item.card.info.id}
                                 card={item.card.info}
                               />
                             );
-                          })
-                        : null
-                    }
-                  />
-                </div>
-              );
+                          })}
+                        />
+                      );
+                    })}
+                  </div>
+                );
             })}
       </div>
     </>

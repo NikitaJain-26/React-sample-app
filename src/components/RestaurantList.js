@@ -34,17 +34,6 @@ const RestaurantList = () => {
     setFilterResList(filterResList);
   };
 
-  if (filterResList.length <= 0) {
-    console.log("shimmer");
-    return (
-      <div className="flex flex-wrap">
-        <ShimmerUI /> <ShimmerUI /> <ShimmerUI /> <ShimmerUI /> <ShimmerUI />
-        <ShimmerUI /> <ShimmerUI /> <ShimmerUI />
-        <ShimmerUI /> <ShimmerUI />
-      </div>
-    );
-  }
-
   return (
     <>
       <input
@@ -55,15 +44,24 @@ const RestaurantList = () => {
         onChange={(e) => onSearchInput(e)}
       />
       <div className="flex flex-wrap ml-4">
-        {filterResList.map((res) => (
-          <Link
-            className="text-black no-underline"
-            key={res?.data?.id}
-            to={"/restaurant/" + res?.data?.id}
-          >
-            <RestaurantCard data={res.data} />
-          </Link>
-        ))}
+        {filterResList.length <= 0 ? (
+          <div className="flex flex-wrap">
+            <ShimmerUI /> <ShimmerUI /> <ShimmerUI /> <ShimmerUI />
+            <ShimmerUI />
+            <ShimmerUI /> <ShimmerUI /> <ShimmerUI />
+            <ShimmerUI /> <ShimmerUI />
+          </div>
+        ) : (
+          filterResList.map((res) => (
+            <Link
+              className="text-black no-underline"
+              key={res?.data?.id}
+              to={"/restaurant/" + res?.data?.id}
+            >
+              <RestaurantCard data={res.data} />
+            </Link>
+          ))
+        )}
       </div>
     </>
   );
