@@ -1,7 +1,7 @@
 export const ShimmerUI = () => {
   return (
     <>
-      <div className="card">
+      <div className="h-60">
         <div className="resImage"></div>
         <h3 className="resHeading"></h3>
         <div className="res-details">

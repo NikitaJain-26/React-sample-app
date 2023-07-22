@@ -4,12 +4,15 @@ const Accordion = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="accordion-item">
-      <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
-        <h4 className="accordion-heading">{title}</h4>
-        <h4 className="accordion-heading">{isActive ? "-" : "+"}</h4>
+    <div className="m-4">
+      <div
+        className="flex justify-between my-2 py-2 hover:shadow-sm hover:shadow-gray-300 items-center"
+        onClick={() => setIsActive(!isActive)}
+      >
+        <h4 className="font-semibold">{title}</h4>
+        <h4 className="font-semibold pr-4">{isActive ? "-" : "+"}</h4>
       </div>
-      {isActive && <div className="accordion-content">{content}</div>}
+      {isActive && <div>{content}</div>}
     </div>
   );
 };

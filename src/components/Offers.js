@@ -1,16 +1,17 @@
 import { OFFER_ICON } from "../utils/constant";
 
 const Offers = (props) => {
-  // const info = props.offer.info;
   const { header, couponCode, description, offerLogo } = props.offer.info;
   return (
     <>
-      <div className="offer-div">
-        <div className="offer-heading-continer">
+      <div className="border-[1px] border-solid border-gray-400 rounded-md mr-4 p-2 mb-4">
+        <div className="flex items-center">
           <img className="offer-icon" src={OFFER_ICON + offerLogo} />
-          <div>{header}</div>
+          <div className="text-sm px-2 font-semibold text-gray-500">
+            {header}
+          </div>
         </div>
-        <div className="offer-description">
+        <div className="text-xs pt-2 text-semibold text-gray-400">
           {couponCode} | {description}
         </div>
       </div>

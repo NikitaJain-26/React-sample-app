@@ -1,38 +1,22 @@
-import { useEffect, useState } from "react";
-import { RESTAURANT_DETAIL_URL, IMAGE_URL } from "../utils/constant";
 import { useParams } from "react-router-dom";
 import Accordion from "./Accordion";
 import Offers from "./Offers";
 import Item from "./Item";
 import RestaurantInfo from "./RestaurantInfo";
+import useRestaurantDetails from "../utils/useRestaurantDetails";
 
 const RestaurantDetails = () => {
   const { restaurantId } = useParams();
-  const [resDetails, setResDetails] = useState(null);
-  const [offers, setOffers] = useState([]);
-  const [recommended, setRecommended] = useState([]);
-
-  useEffect(() => {
-    fetchRestaurantData();
-  }, []);
-
-  const fetchRestaurantData = async () => {
-    const data = await fetch(RESTAURANT_DETAIL_URL + restaurantId);
-    const jsonData = await data.json();
-    const resDetail =
-      jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
-    setResDetails(jsonData?.data?.cards[0]?.card?.card?.info);
-    setOffers(
-      jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.offers
-    );
-    setRecommended(resDetail);
-  };
+  const data = useRestaurantDetails(restaurantId);
+  const resDetails = data.resDetails;
+  const offers = data.offers;
+  const recommended = data.recommended;
 
   return (
     <>
       {resDetails == null ? null : <RestaurantInfo resInfo={resDetails} />}
       {offers.length <= 0 ? null : (
-        <div className="offers-container">
+        <div className="flex border-b-[1px] border-gray-500 border-dotted mx-4 sm:flex-wrap">
           {offers.map((offer) => {
             return <Offers key={offers.restId} offer={offer} />;
           })}
@@ -42,31 +26,29 @@ const RestaurantDetails = () => {
         {recommended.length <= 0
           ? null
           : recommended.map((card, index) => {
-              if (index >= 2) {
-                return (
-                  <div className="item-container">
-                    <Accordion
-                      title={
-                        card.card.card.hasOwnProperty("title")
-                          ? card.card.card.title
-                          : null
-                      }
-                      content={
-                        card.card.card.hasOwnProperty("itemCards")
-                          ? card?.card?.card?.itemCards.map((item) => {
-                              return (
-                                <Item
-                                  key={item.card.info.id}
-                                  card={item.card.info}
-                                />
-                              );
-                            })
-                          : null
-                      }
-                    />
-                  </div>
-                );
-              }
+              return (
+                <div key={index} className="item-container">
+                  <Accordion
+                    title={
+                      card.card.card.hasOwnProperty("title")
+                        ? card.card.card.title
+                        : null
+                    }
+                    content={
+                      card.card.card.hasOwnProperty("itemCards")
+                        ? card?.card?.card?.itemCards.map((item) => {
+                            return (
+                              <Item
+                                key={item.card.info.id}
+                                card={item.card.info}
+                              />
+                            );
+                          })
+                        : null
+                    }
+                  />
+                </div>
+              );
             })}
       </div>
     </>

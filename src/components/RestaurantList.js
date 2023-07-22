@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { RestaurantCard } from "./RestaurantCard";
 import { ShimmerUI } from "./ShimmerUI";
 import { Link } from "react-router-dom";
+//import { RESTAURANT_API } from "../utils/constant";
 
 const RestaurantList = () => {
-  const [resList, setData] = useState([]);
+  const [resList, setResList] = useState([]);
   const [filterResList, setFilterResList] = useState([]);
   const [searchInput, setSearchInput] = useState("");
 
@@ -19,9 +20,8 @@ const RestaurantList = () => {
 
     const jsonData = await data.json();
 
-    setData(jsonData?.data?.cards[2]?.data?.data?.cards);
+    setResList(jsonData?.data?.cards[2]?.data?.data?.cards);
     setFilterResList(jsonData?.data?.cards[2]?.data?.data?.cards);
-    //console.log(jsonData?.data?.cards[2]?.data?.data?.cards);
   };
 
   const onSearchInput = (event) => {
@@ -35,30 +35,29 @@ const RestaurantList = () => {
   };
 
   if (filterResList.length <= 0) {
+    console.log("shimmer");
     return (
-      <>
-        <div className="shimmerUi-container">
-          <ShimmerUI /> <ShimmerUI /> <ShimmerUI /> <ShimmerUI /> <ShimmerUI />
-          <ShimmerUI /> <ShimmerUI /> <ShimmerUI />
-          <ShimmerUI /> <ShimmerUI />
-        </div>
-      </>
+      <div className="flex flex-wrap">
+        <ShimmerUI /> <ShimmerUI /> <ShimmerUI /> <ShimmerUI /> <ShimmerUI />
+        <ShimmerUI /> <ShimmerUI /> <ShimmerUI />
+        <ShimmerUI /> <ShimmerUI />
+      </div>
     );
   }
 
   return (
     <>
       <input
-        className="inputSearch"
+        className="w-60 ml-4 p-1 border-solid border-darkgray border-2"
         type="search"
         placeholder="Search"
         value={searchInput}
         onChange={(e) => onSearchInput(e)}
       />
-      <div className="card-container">
+      <div className="flex flex-wrap ml-4">
         {filterResList.map((res) => (
           <Link
-            className="resList"
+            className="text-black no-underline"
             key={res?.data?.id}
             to={"/restaurant/" + res?.data?.id}
           >
