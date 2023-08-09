@@ -1,6 +1,6 @@
 import { IMAGE_URL } from "../utils/constant";
 
-export const RestaurantCard = (props) => {
+export const RestaurantCard = ({ data }) => {
   const {
     cloudinaryImageId,
     name,
@@ -8,7 +8,7 @@ export const RestaurantCard = (props) => {
     cuisines,
     deliveryTime,
     costForTwo,
-  } = props.data;
+  } = data;
 
   return (
     <>
@@ -32,7 +32,7 @@ export const RestaurantCard = (props) => {
             </svg>
           </div>
           <div className="text-gray-500">{deliveryTime} min</div>
-          <div className="text-gray-500">{costForTwo / 100} for two</div>
+          <div className="text-gray-500">₹ {costForTwo / 100} for two</div>
         </div>
         <div className="text-xs text-gray-500 pt-2">{cuisines.join(", ")}</div>
       </div>
@@ -40,4 +40,16 @@ export const RestaurantCard = (props) => {
   );
 };
 
+export const withPromomtedTag = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <div className="absolute text-white bg-black p-1 text-xs rounded-md mt-4">
+          Promoted
+        </div>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
+};
 export default RestaurantCard;

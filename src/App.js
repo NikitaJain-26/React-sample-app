@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import RestaurantList from "./components/RestaurantList";
@@ -7,11 +7,15 @@ import Error from "./components/Error";
 //import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import RestaurantDetails from "./components/RestaurantDetails";
-
+import { UserContext } from "./utils/UserContext";
+import Cart from "./components/Cart";
 const App = () => {
+  const [userName, setUserName] = useState("Nikita");
   return (
     <>
-      <Header />
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <Header />
+      </UserContext.Provider>
       <Outlet />
     </>
   );
@@ -38,6 +42,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactUs />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "/restaurant/:restaurantId",

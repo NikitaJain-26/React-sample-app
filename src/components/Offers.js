@@ -1,7 +1,7 @@
 import { OFFER_ICON } from "../utils/constant";
 
-const Offers = (props) => {
-  const { header, couponCode, description, offerLogo } = props.offer.info;
+const Offers = ({ offer }) => {
+  const { header, couponCode, description, offerLogo } = offer?.info;
   return (
     <>
       <div className="border-[1px] border-solid border-gray-400 rounded-md mr-4 p-2 mb-4">

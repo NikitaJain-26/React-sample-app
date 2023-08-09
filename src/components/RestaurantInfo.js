@@ -1,4 +1,4 @@
-const RestaurantInfo = (props) => {
+const RestaurantInfo = ({ resInfo }) => {
   const {
     name,
     cuisines,
@@ -6,10 +6,10 @@ const RestaurantInfo = (props) => {
     avgRating,
     totalRatingsString,
     costForTwoMessage,
-  } = props.resInfo;
+  } = resInfo;
   return (
     <>
-      <div className="flex justify-between py-2 mx-4 my-3 border-b-[1px] border-gray-300 ">
+      <div className="flex justify-between sm:w-11/12 py-2 mx-auto sm:mx-4 my-3 border-b-[1px] border-gray-300 w-9/12">
         <div>
           <h3 className="text-lg font-bold">{name}</h3>
           <div className="text-gray-500 text-xs">{cuisines.join(", ")}</div>
@@ -37,7 +37,7 @@ const RestaurantInfo = (props) => {
           </div>
         </div>
       </div>
-      <div className="px-4 text-gray-500 flex my-2">
+      <div className="text-gray-500 flex my-2 w-9/12 mx-auto sm:w-full sm:mx-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -52,7 +52,7 @@ const RestaurantInfo = (props) => {
             d="M15 8.25H9m6 3H9m3 6l-3-3h1.5a3 3 0 100-6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
-        <div className="pl-2 fond-bolder"> {costForTwoMessage}</div>
+        <div className="pl-2 fond-bolder ">{costForTwoMessage}</div>
       </div>
     </>
   );

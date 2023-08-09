@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { RestaurantCard } from "./RestaurantCard";
+import RestaurantCard, { withPromomtedTag } from "./RestaurantCard";
 import { ShimmerUI } from "./ShimmerUI";
 import { Link } from "react-router-dom";
 //import { RESTAURANT_API } from "../utils/constant";
@@ -13,6 +13,7 @@ const RestaurantList = () => {
     fetchData();
   }, []);
 
+  const PromotedCard = withPromomtedTag(RestaurantCard);
   const fetchData = async () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&page_type=DESKTOP_WEB_LISTING"
@@ -20,15 +21,21 @@ const RestaurantList = () => {
 
     const jsonData = await data.json();
 
-    setResList(jsonData?.data?.cards[2]?.data?.data?.cards);
-    setFilterResList(jsonData?.data?.cards[2]?.data?.data?.cards);
+    setResList(
+      jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
+    );
+    setFilterResList(
+      jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
+    );
   };
 
   const onSearchInput = (event) => {
     const input = event.target.value;
     setSearchInput(input);
     const filterResList = resList.filter((res) =>
-      res.data.name.toLowerCase().includes(input.toLowerCase())
+      res.info.name.toLowerCase().includes(input.toLowerCase())
     );
 
     setFilterResList(filterResList);
@@ -55,10 +62,14 @@ const RestaurantList = () => {
           filterResList.map((res) => (
             <Link
               className="text-black no-underline"
-              key={res?.data?.id}
-              to={"/restaurant/" + res?.data?.id}
+              key={res?.info?.id}
+              to={"/restaurant/" + res?.info?.id}
             >
-              <RestaurantCard data={res.data} />
+              {res.info.promoted ? (
+                <PromotedCard data={res.info} />
+              ) : (
+                <RestaurantCard data={res.info} />
+              )}
             </Link>
           ))
         )}
