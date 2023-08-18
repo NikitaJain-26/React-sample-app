@@ -8,7 +8,7 @@ const LoginPage = () => {
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isPassWordValid, setIsPassWordValid] = useState(true);
   const [emailError, setEmailError] = useState("");
-  const { loggedInUser, setUserDetails } = useContext(UserContext);
+  const { userData, setUserDetails } = useContext(UserContext);
   const [userNotFound, setUserNotFound] = useState(false);
   const onSignInClick = () => {
     if (email == "") {
@@ -26,7 +26,7 @@ const LoginPage = () => {
       setIsPassWordValid(true);
       setEmailError("");
 
-      if (loggedInUser.length == 0) {
+      if (userData.length == 0) {
         setUserNotFound(true);
       }
     }

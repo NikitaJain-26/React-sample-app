@@ -1,5 +1,6 @@
 import { UserContext } from "../utils/UserContext";
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -9,8 +10,8 @@ const SignUp = () => {
   const [isLastNameValid, setIsLastNameValid] = useState(true);
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isPassWordValid, setIsPassWordValid] = useState(true);
-  const [emailError, setEmailError] = useState("");
-  const { loggedInUser, setUserDetails } = useContext(UserContext);
+  const { userData, setUserDetails } = useContext(UserContext);
+  const [userAlreadyExist, setUserAlreadyExist] = useState(false);
   const onSignUpClick = () => {
     if (firstName == "") {
       setIsFirstNameValid(false);
@@ -18,24 +19,22 @@ const SignUp = () => {
     if (lastName == "") {
       setIsLastNameValid(false);
     }
-    if (email == "") {
+    if (
+      email == "" &&
+      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+    ) {
       setIsEmailValid(false);
-      setEmailError("Please enter the email");
+    } else {
+      setIsEmailValid(true);
     }
     if (password == "" || password.length < 8) {
       setIsPassWordValid(false);
-    }
-    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-      setIsEmailValid(false);
-      setEmailError("Please enter the vaild email");
-      setIsPassWordValid(true);
     } else {
       setIsFirstNameValid(true);
       setIsLastNameValid(true);
       setIsEmailValid(true);
       setIsPassWordValid(true);
-      setEmailError("");
-      let userDetails = loggedInUser;
+      let userDetails = userData;
       if (userDetails.length == 0) {
         userDetails.push({
           firstName: firstName,
@@ -43,6 +42,25 @@ const SignUp = () => {
           email: email,
           password: password,
         });
+        setUserDetails(userDetails);
+      } else {
+        let userExist = false;
+        userDetails.map((user) => {
+          if (user.email == email) {
+            userExist = true;
+            setUserAlreadyExist(true);
+          }
+        });
+
+        if (!userExist) {
+          userDetails.push({
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            password: password,
+          });
+          setUserDetails(userDetails);
+        }
       }
     }
   };
@@ -60,7 +78,10 @@ const SignUp = () => {
             className="bg-gray-200 h-8 w-60 rounded-sm p-2"
             value={firstName}
             required
-            onChange={(e) => setFirstName(e.target.value)}
+            onChange={(e) => {
+              setFirstName(e.target.value);
+              setIsFirstNameValid(true);
+            }}
           />
           {isFirstNameValid ? null : (
             <div className="py-2 text-red-500">Please enter first name</div>
@@ -77,7 +98,10 @@ const SignUp = () => {
             className="bg-gray-200 h-8 w-60 rounded-sm p-2"
             value={lastName}
             required
-            onChange={(e) => setLastName(e.target.value)}
+            onChange={(e) => {
+              setLastName(e.target.value);
+              setIsLastNameValid(true);
+            }}
           />
           {isLastNameValid ? null : (
             <div className="py-2 text-red-500">Please enter last name</div>
@@ -97,7 +121,9 @@ const SignUp = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
           {isEmailValid ? null : (
-            <div className="py-2 text-red-500">{emailError}</div>
+            <div className="py-2 text-red-500">
+              Please enter the vaild email
+            </div>
           )}
         </div>
         <div className="m-4">
@@ -120,13 +146,25 @@ const SignUp = () => {
         </div>
         <div className="mx-28">
           <button
-            className="p-1 bg-orange-400 rounded-md text-white font-bold"
+            className="p-2 bg-orange-400 rounded-md text-white font-bold"
             onClick={() => onSignUpClick()}
           >
             Create
           </button>
         </div>
       </div>
+      {userAlreadyExist ? (
+        <div>
+          <p>Please SignUp with other email. This email already exist.</p>
+          <p>Or</p>
+          <Link
+            to="/login"
+            className="p-1 bg-orange-400 rounded-md text-white font-bold"
+          >
+            Sign In
+          </Link>
+        </div>
+      ) : null}
     </>
   );
 };

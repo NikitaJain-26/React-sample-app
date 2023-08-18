@@ -13,7 +13,7 @@ const Header = () => {
     setLoginText(text);
   };
 
-  const { loggedInUser, setUserDetails } = useContext(UserContext);
+  const { userData, setUserDetails } = useContext(UserContext);
   const onMenuIconClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };

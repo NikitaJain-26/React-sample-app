@@ -21,9 +21,7 @@ const App = () => {
   });
   return (
     <>
-      <UserContext.Provider
-        value={{ loggedInUser: userDetails, setUserDetails }}
-      >
+      <UserContext.Provider value={{ userData: userDetails, setUserDetails }}>
         <Header />
         <CartContext.Provider
           value={{ cartDetails: cartDetail, setCartDetails }}
