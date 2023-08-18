@@ -1,10 +1,21 @@
 import { IMAGE_URL } from "../utils/constant";
+import { useState } from "react";
 
-const Item = ({ card, onlyVeg }) => {
+const Item = ({ card, onAddItemClick, count, OnRemoveItemClick }) => {
   const { name, description, price, imageId, isVeg } = card;
+  const [itemCount, SetItemCount] = useState(count);
+  const onAddClick = (card) => {
+    SetItemCount(itemCount + 1);
+    onAddItemClick(card);
+  };
+
+  const onRemoveClick = (card) => {
+    SetItemCount(itemCount - 1);
+    OnRemoveItemClick(card);
+  };
   return (
     <>
-      <div className="flex sm:w-full h-36 justify-between px-2 py-0 my-2 text-sm hover:shadow-sm hover:shadow-gray-400 border-b-[1px] border-gray-200 border-solid">
+      <div className="flex sm:w-full min-h-[145] justify-between px-2 py-0 my-2 text-sm hover:shadow-sm hover:shadow-gray-400 border-b-[1px] border-gray-200 border-solid">
         <div className="w-9/12">
           {isVeg ? (
             <svg
@@ -35,12 +46,30 @@ const Item = ({ card, onlyVeg }) => {
           )}
           <h3 className="font-bold">{name}</h3>
           <div className="font-semibold">₹ {price / 100}</div>
-          <p className="py-2 text-gray-500 w-10/12">{description}</p>
+          <p className="py-2 text-gray-500 w-10/12 ">{description}</p>
         </div>
         <div className="">
-          <button className="absolute mt-[6rem] mx-4 p-1 px-2 w-20 text-sm text-green-700 rounded-sm shadow-lg shadow-gray-300">
-            Add +
-          </button>
+          {itemCount == 0 ? (
+            <button
+              className="absolute mt-[6rem] mx-4 p-1 px-2 w-20 text-sm text-green-700 rounded-sm shadow-lg shadow-gray-300 hover:cursor-pointer"
+              onClick={() => onAddClick(card)}
+            >
+              Add +
+            </button>
+          ) : (
+            <div className="flex absolute mt-[6rem] mx-4 p-1 px-2 w-20 justify-between text-sm text-green-700 rounded-sm shadow-lg shadow-gray-300">
+              <button
+                className="p-1 px-2 w-2 "
+                onClick={() => onRemoveClick(card)}
+              >
+                -
+              </button>
+              <div className="p-1 px-2 w-2">{itemCount}</div>
+              <button className="p-1 px-2 w-2" onClick={() => onAddClick(card)}>
+                +
+              </button>
+            </div>
+          )}
           <img className="w-32" src={IMAGE_URL + imageId} />
         </div>
       </div>

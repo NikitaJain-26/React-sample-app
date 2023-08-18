@@ -4,13 +4,17 @@ import Offers from "./Offers";
 import Item from "./Item";
 import RestaurantInfo from "./RestaurantInfo";
 import useRestaurantDetails from "../utils/useRestaurantDetails";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "../utils/cartContext";
+import findItemCount from "../utils/cartUpdate";
 
 const RestaurantDetails = () => {
   const { restaurantId } = useParams();
   const data = useRestaurantDetails(restaurantId);
   const [activeIndex, setActiveIndex] = useState(null);
   const [isVeg, setIsVeg] = useState(false);
+  const { cartDetails, setCartDetails } = useContext(CartContext);
+  const [cart, setCart] = useState(cartDetails);
   const resDetails = data.resDetails;
   const offers = data.offers;
   const recommended = data.recommended.filter(
@@ -23,6 +27,59 @@ const RestaurantDetails = () => {
     const isVeg = e.target.checked;
     setIsVeg(isVeg);
   };
+  const onAddItemClick = (item) => {
+    let cart = cartDetails;
+    if (cart.resId == "" || cart.resId == restaurantId) {
+      cart.resId = restaurantId;
+      let initialcount = findItemCount(cart, item);
+      if (initialcount == 0) {
+        cart.items.push({ count: initialcount + 1, item: item });
+      } else {
+        let updatedCart = cart.items.map((i) => {
+          if (i.item.id == item.id) {
+            i.count = i.count + 1;
+          }
+          return i;
+        });
+        cart.items = updatedCart;
+      }
+    }
+    setCartDetails(cart);
+    setCart(cart);
+    console.log(cart);
+  };
+
+  const OnRemoveItemClick = (item) => {
+    let cart = cartDetails;
+    let initialcount = findItemCount(cart, item);
+    if (initialcount > 1) {
+      let updatedCart = cart.items.map((i) => {
+        if (i.item.id == item.id) {
+          i.count = i.count - 1;
+        }
+        return i;
+      });
+      cart.items = updatedCart;
+    }
+    if (initialcount == 1) {
+      let itemIndex;
+      cart.items.map((i, index) => {
+        if (i.item.id == item.id) {
+          i.count = i.count - 1;
+          itemIndex = index;
+        }
+        return i;
+      });
+      cart.items.splice(itemIndex, 1);
+    }
+    if (cart.items.length == 0) {
+      cart.resId = "";
+    }
+
+    setCartDetails(cart);
+    setCart(cart);
+    console.log(cart);
+  };
 
   return (
     <>
@@ -30,7 +87,7 @@ const RestaurantDetails = () => {
       {offers.length <= 0 ? null : (
         <div className="flex border-b-[1px] w-9/12 mx-auto sm:w-11/12 sm:mx-4 border-gray-500 border-dotted sm:flex-wrap">
           {offers.map((offer) => {
-            return <Offers key={offers.restId} offer={offer} />;
+            return <Offers key={offers?.info?.offerIds[0]} offer={offer} />;
           })}
         </div>
       )}
@@ -61,8 +118,12 @@ const RestaurantDetails = () => {
                           return (
                             <Item
                               key={item.card.info.id}
-                              onlyVeg={isVeg}
                               card={item.card.info}
+                              onAddItemClick={(item) => onAddItemClick(item)}
+                              OnRemoveItemClick={(item) =>
+                                OnRemoveItemClick(item)
+                              }
+                              count={findItemCount(cart, item.card.info)}
                             />
                           );
                         } else return null;
@@ -70,8 +131,12 @@ const RestaurantDetails = () => {
                         return (
                           <Item
                             key={item.card.info.id}
-                            onlyVeg={isVeg}
                             card={item.card.info}
+                            onAddItemClick={(item) => onAddItemClick(item)}
+                            OnRemoveItemClick={(item) =>
+                              OnRemoveItemClick(item)
+                            }
+                            count={findItemCount(cart, item.card.info)}
                           />
                         );
                     })}
