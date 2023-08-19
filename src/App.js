@@ -12,8 +12,10 @@ import Cart from "./components/Cart";
 import { CartContext } from "./utils/cartContext";
 import LoginPage from "./components/LoginPage";
 import SignUp from "./components/signUp";
+import LoggedInUserContext from "./utils/loggedInUserContext";
 const App = () => {
   const [userDetails, setUserDetails] = useState([]);
+  const [logInUser, setLogInUser] = useState({});
   const [cartDetail, setCartDetails] = useState({
     restaurantName: "",
     resId: "",
@@ -22,12 +24,16 @@ const App = () => {
   return (
     <>
       <UserContext.Provider value={{ userData: userDetails, setUserDetails }}>
-        <Header />
-        <CartContext.Provider
-          value={{ cartDetails: cartDetail, setCartDetails }}
+        <LoggedInUserContext.Provider
+          value={{ loggedInUser: logInUser, setLogInUser }}
         >
-          <Outlet />
-        </CartContext.Provider>
+          <CartContext.Provider
+            value={{ cartDetails: cartDetail, setCartDetails }}
+          >
+            <Header />
+            <Outlet />
+          </CartContext.Provider>
+        </LoggedInUserContext.Provider>
       </UserContext.Provider>
     </>
   );

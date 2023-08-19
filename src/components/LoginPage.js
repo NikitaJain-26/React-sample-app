@@ -1,46 +1,99 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../utils/UserContext";
 import { Link } from "react-router-dom";
+import LoggedInUserContext from "../utils/loggedInUserContext";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isEmailValid, setIsEmailValid] = useState(true);
-  const [isPassWordValid, setIsPassWordValid] = useState(true);
-  const [emailError, setEmailError] = useState("");
-  const { userData, setUserDetails } = useContext(UserContext);
+  const [isEmailInValid, setIsEmailInValid] = useState(false);
+  const [isPassWordInValid, setIsPassWordInValid] = useState(false);
+  const { userData } = useContext(UserContext);
+  const { loggedInUser, setLogInUser } = useContext(LoggedInUserContext);
   const [userNotFound, setUserNotFound] = useState(false);
-  const onSignInClick = () => {
-    if (email == "") {
-      setIsEmailValid(false);
-      setEmailError("Please enter the email");
-    } else if (password == "") {
-      setIsEmailValid(true);
-      setIsPassWordValid(false);
-    } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-      setIsEmailValid(false);
-      setEmailError("Please enter the vaild email");
-      setIsPassWordValid(true);
-    } else {
-      setIsEmailValid(true);
-      setIsPassWordValid(true);
-      setEmailError("");
+  const [emailFound, setEmailFound] = useState(false);
+  const [signedInSuccessfully, setSignedInSuccessfully] = useState(
+    loggedInUser.firstName == undefined ? false : true
+  );
 
+  const onSignInClick = () => {
+    if (
+      email != "" &&
+      !isEmailInValid &&
+      password != "" &&
+      !isPassWordInValid
+    ) {
       if (userData.length == 0) {
         setUserNotFound(true);
+      } else {
+        let user = userData.filter((user) => {
+          if (user.email == email) return user;
+        });
+        if (user.length == 0) {
+          setUserNotFound(true);
+        } else if (user[0].password !== password) {
+          setEmailFound(true);
+        } else {
+          setLogInUser(user[0]);
+          setSignedInSuccessfully(true);
+          setEmailFound(false);
+        }
       }
+    } else {
+      if (email == "") setIsEmailInValid(true);
+      if (password == "") setIsPassWordInValid(true);
     }
   };
+
+  const onSignOutClick = () => {
+    setLogInUser({});
+    setSignedInSuccessfully(false);
+    setEmail("");
+    setPassword("");
+  };
+
+  const onEmailChange = (e) => {
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value)) {
+      setIsEmailInValid(true);
+    } else {
+      setIsEmailInValid(false);
+    }
+    setEmail(e.target.value);
+  };
+
+  const onPasswordChange = (e) => {
+    if (e.target.value.length < 8) {
+      setIsPassWordInValid(true);
+    } else {
+      setIsPassWordInValid(false);
+    }
+    setEmailFound(false);
+    setPassword(e.target.value);
+  };
+
   return (
     <div>
       {userNotFound ? (
-        <div className="w-3/12 mx-auto">
-          <p>No User found</p>
+        <div className="w-3/12 mx-auto text-center">
+          <p className="m-4">No User found</p>
           <Link to="/signUp">
             <button className="p-1 bg-orange-400 rounded-md text-white font-bold">
               create a new account
             </button>
           </Link>
+        </div>
+      ) : signedInSuccessfully ? (
+        <div className="w-3/12 mx-auto text-center">
+          <p className="p-4">Signed In successfully</p>
+          <p className="p-2">
+            Welcome {loggedInUser.firstName + " " + loggedInUser.lastName}
+          </p>
+          <button
+            className="p-1 bg-orange-400 rounded-md text-white font-bold"
+            onClick={() => onSignOutClick()}
+          >
+            Sign Out
+          </button>
         </div>
       ) : (
         <div className="w-3/12 mx-auto">
@@ -52,12 +105,15 @@ const LoginPage = () => {
             </div>
             <input
               type="email"
-              className="bg-gray-200 h-8 w-60 rounded-sm p-2"
+              className="bg-gray-200 h-8 w-80 rounded-sm p-2"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              required
+              onChange={(e) => onEmailChange(e)}
             />
-            {isEmailValid ? null : (
-              <div className="py-2 text-red-500">{emailError}</div>
+            {!isEmailInValid ? null : (
+              <div className="py-2 text-red-500">
+                Please enter the vaild email
+              </div>
             )}
           </div>
           <div className="m-4">
@@ -68,24 +124,34 @@ const LoginPage = () => {
             </div>
             <input
               type="password"
-              className="bg-gray-200 h-8 w-60 rounded-sm p-2"
+              className="bg-gray-200 h-8 w-80 rounded-sm p-2"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              required
+              minLength={8}
+              onChange={(e) => onPasswordChange(e)}
             />
-            {isPassWordValid ? null : (
+            {!isPassWordInValid ? null : (
               <div className="py-2 text-red-500">
                 Please enter the password.
               </div>
             )}
           </div>
-          <div className="mx-28">
+          <div className="flex justify-between ml-4">
             <button
               className="p-1 bg-orange-400 rounded-md text-white font-bold"
               onClick={() => onSignInClick()}
             >
               Sign In
             </button>
+            <Link to="/signUp" className="pl-4">
+              <button className="p-1 bg-orange-400 rounded-md text-white font-bold">
+                create a new account
+              </button>
+            </Link>
           </div>
+          {emailFound ? (
+            <div className="py-2 text-red-500">Incorrect Password</div>
+          ) : null}
         </div>
       )}
     </div>

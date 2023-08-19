@@ -3,17 +3,13 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { UserContext } from "../utils/UserContext";
+import LoggedInUserContext from "../utils/loggedInUserContext";
 
 const Header = () => {
   const [login, setLoginText] = useState("Login");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  onLoginClick = () => {
-    const text = login == "Login" ? "Log Out" : "Login";
-    setLoginText(text);
-  };
-
-  const { userData, setUserDetails } = useContext(UserContext);
+  const { loggedInUser } = useContext(LoggedInUserContext);
   const onMenuIconClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -50,7 +46,7 @@ const Header = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-6 h-6 "
                 >
                   <path
                     strokeLinecap="round"
@@ -63,13 +59,13 @@ const Header = () => {
             </li>
           </ul>
 
-          {login == "Login" ? (
+          {loggedInUser.firstName == undefined ? (
             <Link to="/login" className="flex">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 mt-2"
               >
                 <path
                   fillRule="evenodd"
@@ -77,15 +73,12 @@ const Header = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <button classNmae="p-2">Sign In</button>
+              <button className="p-2">Sign In</button>
             </Link>
           ) : (
-            <button
-              className="border bg-gray-500 p-2 rounded"
-              onClick={() => onLoginClick()}
-            >
-              {login}
-            </button>
+            <Link to="/login">
+              <div>{loggedInUser.firstName}</div>
+            </Link>
           )}
         </div>
         <div className="2xl:hidden md:flex mt-4 mr-2">
