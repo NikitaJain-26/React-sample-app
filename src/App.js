@@ -9,32 +9,26 @@ import ContactUs from "./components/ContactUs";
 import RestaurantDetails from "./components/RestaurantDetails";
 import { UserContext } from "./utils/UserContext";
 import Cart from "./components/Cart";
-import { CartContext } from "./utils/cartContext";
 import LoginPage from "./components/LoginPage";
 import SignUp from "./components/signUp";
 import LoggedInUserContext from "./utils/loggedInUserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/redux/appStore";
 const App = () => {
   const [userDetails, setUserDetails] = useState([]);
   const [logInUser, setLogInUser] = useState({});
-  const [cartDetail, setCartDetails] = useState({
-    restaurantName: "",
-    resId: "",
-    items: [],
-  });
   return (
     <>
-      <UserContext.Provider value={{ userData: userDetails, setUserDetails }}>
-        <LoggedInUserContext.Provider
-          value={{ loggedInUser: logInUser, setLogInUser }}
-        >
-          <CartContext.Provider
-            value={{ cartDetails: cartDetail, setCartDetails }}
+      <Provider store={appStore}>
+        <UserContext.Provider value={{ userData: userDetails, setUserDetails }}>
+          <LoggedInUserContext.Provider
+            value={{ loggedInUser: logInUser, setLogInUser }}
           >
             <Header />
             <Outlet />
-          </CartContext.Provider>
-        </LoggedInUserContext.Provider>
-      </UserContext.Provider>
+          </LoggedInUserContext.Provider>
+        </UserContext.Provider>
+      </Provider>
     </>
   );
 };

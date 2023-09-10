@@ -1,59 +1,8 @@
-import { useContext, useState } from "react";
-import Item from "./Item";
-import { CartContext } from "../utils/cartContext";
-import findItemCount from "../utils/cartUpdate";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import MenuItem from "./MenuItem";
 const Cart = () => {
-  const { cartDetails, setCartDetails } = useContext(CartContext);
-  const [cart, setCart] = useState(cartDetails);
-  const onAddItemClick = (item) => {
-    let cart = cartDetails;
-    let initialcount = findItemCount(cart, item);
-    if (initialcount == 0) {
-      cart.items.push({ count: initialcount + 1, item: item });
-    } else {
-      let updatedCart = cart.items.map((i) => {
-        if (i.item.id == item.id) {
-          i.count = i.count + 1;
-        }
-        return i;
-      });
-      cart.items = updatedCart;
-    }
-    setCartDetails(cart);
-    setCart(cart);
-  };
-
-  const OnRemoveItemClick = (item) => {
-    let cart = cartDetails;
-    let initialcount = findItemCount(cart, item);
-    if (initialcount > 1) {
-      let updatedCart = cart.items.map((i) => {
-        if (i.item.id == item.id) {
-          i.count = i.count - 1;
-        }
-        return i;
-      });
-      cart.items = updatedCart;
-    }
-    if (initialcount == 1) {
-      let itemIndex;
-      cart.items.map((i, index) => {
-        if (i.item.id == item.id) {
-          i.count = i.count - 1;
-          itemIndex = index;
-        }
-        return i;
-      });
-      cart.items.splice(itemIndex, 1);
-    }
-    if (cart.items.length == 0) {
-      cart.resId = "";
-    }
-
-    setCartDetails(cart);
-    setCart(cart);
-  };
+  const cart = useSelector((store) => store.cart);
   return (
     <>
       {cart.resId == "" ? (
@@ -72,17 +21,11 @@ const Cart = () => {
         </div>
       ) : (
         <div className="w-9/12 mx-auto">
-          {cart.items.map((item) => {
-            return (
-              <Item
-                key={item.item.id}
-                card={item.item}
-                onAddItemClick={(item) => onAddItemClick(item)}
-                count={findItemCount(cart, item.item)}
-                OnRemoveItemClick={(item) => OnRemoveItemClick(item)}
-              />
-            );
-          })}
+          <MenuItem
+            items={cart.items}
+            resId={cart.resId}
+            restaurantName={cart.restaurantName}
+          />
         </div>
       )}
     </>
