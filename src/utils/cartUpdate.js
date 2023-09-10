@@ -6,7 +6,7 @@ const findItemCount = (cartDetails, item) => {
     count = 0;
   } else {
     cartDetails.items.map((i) => {
-      if (i.item.id == item.id) {
+      if (i.item.card.info.id == item.card.info.id) {
         count = i.count;
       }
     });

@@ -41,7 +41,7 @@ class UserClass extends React.Component {
             Add
           </button>
           <UserContext.Consumer>
-            {({ loggedInUser }) => <h2>{loggedInUser}</h2>}
+            {({ userData }) => <h2>{userData}</h2>}
           </UserContext.Consumer>
         </div>
       </>

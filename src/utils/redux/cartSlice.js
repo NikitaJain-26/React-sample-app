@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 import findItemCount from "../cartUpdate";
 const cartSlice = createSlice({
   name: "cart",
@@ -10,10 +10,11 @@ const cartSlice = createSlice({
   reducers: {
     addItem: (state, action) => {
       console.log(action.payload);
+      const currentState = current(state);
       if (state.resId == "" || state.resId == action.payload.resId) {
         state.resId = action.payload.resId;
         state.restaurantName = action.payload.restaurantName;
-        let initialcount = findItemCount(state, action.payload.item);
+        let initialcount = findItemCount(currentState, action.payload.item);
         if (initialcount == 0) {
           state.items.push({
             count: initialcount + 1,
@@ -21,7 +22,7 @@ const cartSlice = createSlice({
           });
         } else {
           state.items.map((i) => {
-            if (i.item.id == action.payload.item.id) {
+            if (i.item.card.info.id == action.payload.item.card.info.id) {
               i.count = i.count + 1;
             }
           });
@@ -29,10 +30,11 @@ const cartSlice = createSlice({
       }
     },
     removeItem: (state, action) => {
-      let initialcount = findItemCount(state, action.payload.item);
+      const currentState = current(state);
+      let initialcount = findItemCount(currentState, action.payload.item);
       if (initialcount > 1) {
         state.items.map((i) => {
-          if (i.item.id == action.payload.item.id) {
+          if (i.item.card.info.id == action.payload.item.card.info.id) {
             i.count = i.count - 1;
           }
         });
@@ -40,7 +42,7 @@ const cartSlice = createSlice({
       if (initialcount == 1) {
         let itemIndex;
         state.items.map((i, index) => {
-          if (i.item.id == action.payload.item.id) {
+          if (i.item.card.info.id == action.payload.item.card.info.id) {
             i.count = i.count - 1;
             itemIndex = index;
           }
