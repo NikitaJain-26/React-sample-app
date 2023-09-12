@@ -38,14 +38,17 @@ const MenuItem = ({ items, resId, restaurantName }) => {
   return (
     <>
       {items.map((item) => {
-        const { name, description, price, imageId, isVeg } = item.count
+        const { name, description, price, imageId, isVeg, id } = item.count
           ? item.item.card.info
           : item.card.info;
         let itemCount = findCount(
           item.count ? item.item.card.info : item.card.info
         );
         return (
-          <div className="flex sm:w-full min-h-[145] justify-between px-2 py-0 my-2 text-sm hover:shadow-sm hover:shadow-gray-400 border-b-[1px] border-gray-200 border-solid">
+          <div
+            key={id}
+            className="flex sm:w-full min-h-[145] justify-between px-2 py-0 my-2 text-sm hover:shadow-sm hover:shadow-gray-400 border-b-[1px] border-gray-200 border-solid"
+          >
             <div className="w-9/12">
               {isVeg ? (
                 <svg

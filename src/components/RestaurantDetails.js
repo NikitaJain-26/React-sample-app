@@ -43,6 +43,10 @@ const RestaurantDetails = () => {
         {recommended.length <= 0
           ? null
           : recommended.map((card, index) => {
+              let veg = card?.card?.card?.itemCards.filter((item) => {
+                if (item?.card?.info?.isVeg) return item;
+              });
+              console.log(veg);
               return (
                 <div key={card.card.card.title} className="item-container">
                   <div className="w-9/12 mx-auto sm:w-11/12 sm:mx-4">
@@ -53,10 +57,11 @@ const RestaurantDetails = () => {
                       }
                     >
                       <h4 className="font-semibold">
-                        {card.card.card.title +
-                          " ( " +
-                          card?.card?.card?.itemCards.length +
-                          " )"}
+                        {card.card.card.title} (
+                        {isVeg
+                          ? veg.length
+                          : card?.card?.card?.itemCards.length}
+                        )
                       </h4>
                       <h4 className="font-semibold pr-4">
                         {activeIndex == index ? "\u2B06\uFE0F" : "\u2B07\uFE0F"}
@@ -64,7 +69,7 @@ const RestaurantDetails = () => {
                     </div>
                     {activeIndex == index && (
                       <MenuItem
-                        items={card?.card?.card?.itemCards}
+                        items={isVeg ? veg : card?.card?.card?.itemCards}
                         resId={restaurantId}
                         restaurantName={resDetails.name}
                       />
