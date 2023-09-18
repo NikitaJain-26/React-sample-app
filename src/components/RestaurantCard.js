@@ -12,7 +12,10 @@ export const RestaurantCard = ({ data }) => {
 
   return (
     <>
-      <div className="sm:w-[400px] 2xl:w-72 p-2 mt-4 mr-2 mb-2 ml-0 hover:cursor-pointer hover:shadow-md hover:outline-1">
+      <div
+        data-testid="restaurant-card"
+        className="sm:w-[400px] 2xl:w-72 p-2 mt-4 mr-2 mb-2 ml-0 hover:cursor-pointer hover:shadow-md hover:outline-1"
+      >
         <img alt={name} src={IMAGE_URL + cloudinaryImageId} />
         <h3 className="mt-1 font-semibold text-sm">{name}</h3>
         <div className="flex justify-between mt-1 text-xs">

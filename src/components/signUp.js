@@ -122,7 +122,7 @@ const SignUp = () => {
         <div className="w-3/12 mx-auto">
           <div className="mx-4">
             <div className="py-2">
-              <label for="firstName" className="font-bold ">
+              <label htmlFor="firstName" className="font-bold ">
                 First Name:
               </label>
             </div>
@@ -142,7 +142,7 @@ const SignUp = () => {
           </div>
           <div className="mx-4">
             <div className="py-2">
-              <label for="lastName" className="font-bold ">
+              <label htmlFor="lastName" className="font-bold ">
                 Last Name :
               </label>
             </div>
@@ -162,7 +162,7 @@ const SignUp = () => {
           </div>
           <div className="mx-4 mb-0">
             <div className="py-2">
-              <label for="email" className="font-bold ">
+              <label htmlFor="email" className="font-bold ">
                 Email:
               </label>
             </div>
@@ -182,7 +182,7 @@ const SignUp = () => {
           </div>
           <div className="mx-4">
             <div className="py-2">
-              <label for="password" className="font-bold">
+              <label htmlFor="password" className="font-bold">
                 Create Password:
               </label>
             </div>

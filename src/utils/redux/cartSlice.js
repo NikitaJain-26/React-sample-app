@@ -9,7 +9,6 @@ const cartSlice = createSlice({
   },
   reducers: {
     addItem: (state, action) => {
-      console.log(action.payload);
       const currentState = current(state);
       if (state.resId == "" || state.resId == action.payload.resId) {
         state.resId = action.payload.resId;

@@ -1,0 +1,3066 @@
+{
+  "statusCode": 0,
+  "data": {
+    "statusMessage": "done successfully",
+    "cards": [
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+            "info": {
+              "id": "534235",
+              "name": "Cheesecake & Co.",
+              "city": "Bangalore",
+              "slugs": {
+                "restaurant": "cheesecake-and-co-koramangala-koramangala",
+                "city": "bangalore"
+              },
+              "uniqueId": "6da20d08-e548-4654-9e27-616761693e3d",
+              "cloudinaryImageId": "40b0a201eadbec469c2f9a06d5e7c722",
+              "locality": "6th Block",
+              "areaName": "Koramangala",
+              "costForTwo": "25000",
+              "costForTwoMessage": "₹250 for two",
+              "cuisines": ["Bakery"],
+              "avgRating": 4.5,
+              "veg": true,
+              "feeDetails": {
+                "restaurantId": "534235",
+                "fees": [
+                  {
+                    "name": "distance",
+                    "fee": 6800
+                  },
+                  {
+                    "name": "time"
+                  },
+                  {
+                    "name": "special"
+                  }
+                ],
+                "totalFee": 6800,
+                "icon": "v1648208530/surgecreatives/info",
+                "message": "Far (6 kms) | Additional delivery fee will apply"
+              },
+              "parentId": "387417",
+              "avgRatingString": "4.5",
+              "totalRatingsString": "1K+ ratings",
+              "sla": {
+                "restaurantId": "534235",
+                "deliveryTime": 33,
+                "minDeliveryTime": 33,
+                "maxDeliveryTime": 33,
+                "lastMileTravel": 6.1,
+                "serviceability": "SERVICEABLE",
+                "stressFactor": 0.651712,
+                "rainMode": "RAIN_MODE_NONE",
+                "longDistance": "LONG_DISTANCE_NOT_LONG_DISTANCE",
+                "zoneId": 1,
+                "slaString": "33 MINS",
+                "lastMileTravelString": "6.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+              },
+              "availability": {
+                "nextCloseTime": "2023-09-19 00:00:00",
+                "visibility": true,
+                "opened": true,
+                "restaurantClosedMeta": {}
+              },
+              "aggregatedDiscountInfo": {
+                "header": "FLAT125 off",
+                "shortDescriptionList": [
+                  {
+                    "meta": "FLAT125 off | Use FLATDEAL",
+                    "discountType": "Flat",
+                    "operationType": "RESTAURANT"
+                  },
+                  {
+                    "meta": "Flat ₹150 off on orders above ₹399",
+                    "discountType": "Flat",
+                    "operationType": "RESTAURANT"
+                  }
+                ],
+                "descriptionList": [
+                  {
+                    "meta": "FLAT125 off | Use FLATDEAL",
+                    "discountType": "Flat",
+                    "operationType": "RESTAURANT"
+                  },
+                  {
+                    "meta": "Flat ₹150 off on orders above ₹399 | Use code FLAT150",
+                    "discountType": "Flat",
+                    "operationType": "RESTAURANT"
+                  }
+                ],
+                "visible": true
+              },
+              "badges": {},
+              "slugString": "cheesecake-and-co-koramangala-koramangala",
+              "multiOutlet": true,
+              "isOpen": true,
+              "labels": [
+                {
+                  "title": "Timings",
+                  "message": "null"
+                },
+                {
+                  "title": "Address",
+                  "message": "PROPERTY NO. 9/C, 3RD MAIN OPP,  KORAMANGALA POLICE STATION  BANGALORE, , Bangalore South, Bangalore  Urban, Karnataka"
+                },
+                {
+                  "title": "Cuisines",
+                  "message": "Bakery"
+                }
+              ],
+              "logo": "v1659329302/Gourmet_Delhi/Logos_2nd%20set/Cheesecake___Co..png",
+              "totalRatings": 1000,
+              "aggregatedDiscountInfoV2": {
+                "header": "FLAT125 off",
+                "shortDescriptionList": [
+                  {
+                    "meta": "FLAT125 off | Use FLATDEAL",
+                    "discountType": "Flat",
+                    "operationType": "RESTAURANT"
+                  },
+                  {
+                    "meta": "Flat ₹150 off on orders above ₹399",
+                    "discountType": "Flat",
+                    "operationType": "RESTAURANT"
+                  }
+                ],
+                "descriptionList": [
+                  {
+                    "meta": "FLAT125 off | Use FLATDEAL",
+                    "discountType": "Flat",
+                    "operationType": "RESTAURANT"
+                  },
+                  {
+                    "meta": "Flat ₹150 off on orders above ₹399 | Use code FLAT150",
+                    "discountType": "Flat",
+                    "operationType": "RESTAURANT"
+                  }
+                ],
+                "couponDetailsCta": "View coupon details"
+              },
+              "type": "F",
+              "nudgeBanners": [
+                {
+                  "minValue": 279,
+                  "maxValue": 399,
+                  "priority": 2,
+                  "couponCode": "FLAT150",
+                  "discountInfo": {
+                    "discountType": "Flat",
+                    "value": 150
+                  },
+                  "lockedMessage": "Add items worth ₹<amount> to save ₹150 | Code FLAT150",
+                  "unlockedMessage": "FLAT150 Coupon Unlocked! Use it to save ₹150",
+                  "logoCtx": {}
+                }
+              ],
+              "headerBanner": {
+                "url": "swiggy://webview?is_external=false&webview_url=https://www.swiggy.com/restaurant-info/534235"
+              },
+              "expectationNotifiers": [
+                {
+                  "text": "Far (6 kms) | Additional delivery fee will apply",
+                  "icon": {
+                    "imageId": "v1648208530/surgecreatives/info"
+                  },
+                  "popup": {
+                    "cta": {}
+                  },
+                  "type": "DISTANCE_FEE_FOOD_LM",
+                  "enrichedText": "<b>Far (6 kms)</b> | Additional delivery fee will apply",
+                  "halfCardPopup": {
+                    "halfCardPopupHeader": {}
+                  }
+                }
+              ],
+              "generalPurposeInfoListV2": [
+                {
+                  "cta": {
+                    "info": {
+                      "recordings": {}
+                    },
+                    "linkCta": {}
+                  }
+                }
+              ],
+              "ratingSlab": "RATING_SLAB_5",
+              "restaurantCategory": "RESTAURANT_CATEGORY_GOURMET",
+              "backgroundImage": "v1659419566/Gourmet_Delhi/menu%20header_final%20set/Cheesecake___Co..png",
+              "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+              },
+              "hasBestsellerItems": true,
+              "cartOrderabilityNudgeBanner": {
+                "parameters": {},
+                "presentation": {}
+              },
+              "latLong": "12.941437,77.620728"
+            },
+            "analytics": {}
+          },
+          "relevance": {
+            "type": "RELEVANCE_TYPE_CHECK_ORDERABILITY_ON_ITEM_ADD",
+            "sectionId": "POP_UP_CROUTON_MENU"
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget",
+            "layout": {
+              "rows": 1,
+              "columns": 4,
+              "horizontalScrollEnabled": true,
+              "itemSpacing": 12,
+              "lineSpacing": 10,
+              "widgetPadding": {},
+              "containerStyle": {
+                "containerPadding": {
+                  "left": 10,
+                  "right": 10,
+                  "bottom": 16
+                }
+              },
+              "scrollBar": {}
+            },
+            "id": "offerCollectionWidget_UX4",
+            "gridElements": {
+              "infoWithStyle": {
+                "@type": "type.googleapis.com/swiggy.presentation.food.v2.OfferInfoWithStyle",
+                "offers": [
+                  {
+                    "info": {
+                      "header": "FLAT ₹125 OFF",
+                      "offerTag": "FLAT DEAL",
+                      "offerTagColor": "#E46D47",
+                      "offerIds": ["a967082b-d471-4a31-9e03-b83d3881bf7b"],
+                      "expiryTime": "1970-01-01T00:00:00Z",
+                      "couponCode": "USE FLATDEAL",
+                      "description": "ABOVE ₹249",
+                      "offerType": "offers",
+                      "restId": "534235",
+                      "offerLogo": "offers/generic",
+                      "descriptionTextColor": "#7302060C"
+                    },
+                    "cta": {
+                      "type": "OFFER_HALF_CARD"
+                    }
+                  },
+                  {
+                    "info": {
+                      "header": "FLAT ₹150 OFF",
+                      "offerTag": "FLAT DEAL",
+                      "offerTagColor": "#E46D47",
+                      "offerIds": ["1efdf429-f3bd-4d68-a471-9b4a5ef443c1"],
+                      "expiryTime": "1970-01-01T00:00:00Z",
+                      "couponCode": "USE FLAT150",
+                      "description": "ABOVE ₹399",
+                      "offerType": "offers",
+                      "restId": "534235",
+                      "offerLogo": "offers/generic",
+                      "descriptionTextColor": "#7302060C"
+                    },
+                    "cta": {
+                      "type": "OFFER_HALF_CARD"
+                    }
+                  },
+                  {
+                    "info": {
+                      "header": "FLAT ₹120 OFF",
+                      "offerTagColor": "#E46D47",
+                      "logoBottom": "rng/md/ads/production/32b9f8a87957f8c1ca369622f6a1ca77",
+                      "offerIds": ["ca7907e2-fe15-419d-a22e-b1f4c271b398"],
+                      "expiryTime": "1970-01-01T00:00:00Z",
+                      "couponCode": "USE AXIS120",
+                      "description": "ABOVE ₹500",
+                      "offerType": "offers",
+                      "restId": "534235",
+                      "offerLogo": "rng/md/ads/production/32b9f8a87957f8c1ca369622f6a1ca77",
+                      "descriptionTextColor": "#7302060C"
+                    },
+                    "cta": {
+                      "type": "OFFER_HALF_CARD"
+                    }
+                  },
+                  {
+                    "info": {
+                      "header": "FLAT ₹200 OFF",
+                      "offerTagColor": "#E46D47",
+                      "logoBottom": "rng/md/ads/production/32b9f8a87957f8c1ca369622f6a1ca77",
+                      "offerIds": ["e90c019b-0504-4795-a600-4b3d1ef74370"],
+                      "expiryTime": "1970-01-01T00:00:00Z",
+                      "couponCode": "USE AXIS200",
+                      "description": "ABOVE ₹500",
+                      "offerType": "offers",
+                      "restId": "534235",
+                      "offerLogo": "rng/md/ads/production/32b9f8a87957f8c1ca369622f6a1ca77",
+                      "descriptionTextColor": "#7302060C"
+                    },
+                    "cta": {
+                      "type": "OFFER_HALF_CARD"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      {
+        "groupedCard": {
+          "cardGroupMap": {
+            "REGULAR": {
+              "cards": [
+                {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.MenuVegFilterAndBadge",
+                      "isPureVeg": true,
+                      "badges": {},
+                      "vegOnlyDetails": {
+                        "imageId": "AutoVegOnly_qkjowj",
+                        "title": "Showing only vegetarian options.",
+                        "description": "Tap on the VEG ONLY button to turn off the setting"
+                      },
+                      "topRatedFilter": {}
+                    }
+                  }
+                },
+                {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.MenuCarousel",
+                      "title": "Top Picks",
+                      "carousel": [
+                        {
+                          "type": "TopCarousel",
+                          "subtype": "image",
+                          "bannerId": "1260473",
+                          "creativeId": "TopPicks/LBBCJ",
+                          "title": "Lotus Biscoff Baked Cheesecake Jar",
+                          "description": " ",
+                          "fontColor": "#FFFFFF",
+                          "dish": {
+                            "info": {
+                              "id": "113915361",
+                              "name": "Lotus Biscoff Baked Cheesecake Jar",
+                              "category": "Jar",
+                              "description": "Smooth & Dense Cheesecake Jar For Caramelization-Crazy Sweet-Tooths",
+                              "imageId": "6dd0b17e20e49863396b5edde51719f1",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 35000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "type": "TopCarousel",
+                          "subtype": "image",
+                          "bannerId": "1260495",
+                          "creativeId": "TopPicks/TirJar",
+                          "title": "Tiramisu Jar",
+                          "description": " ",
+                          "fontColor": "#FFFFFF",
+                          "dish": {
+                            "info": {
+                              "id": "91208611",
+                              "name": "Tiramisu Jar",
+                              "category": "Jar",
+                              "description": "Deep Satisfying Layers Of Sponge With Just The Right Amount Of Coffee And Chocolate Drizzles",
+                              "imageId": "1afb1ba4b1e22e5f0cd9cb691b67ed9d",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 28000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "type": "TopCarousel",
+                          "subtype": "image",
+                          "bannerId": "1260553",
+                          "creativeId": "TopPicks/BBCJar",
+                          "title": "Blueberry Baked Cheesecake Jar",
+                          "description": " ",
+                          "fontColor": "#FFFFFF",
+                          "dish": {
+                            "info": {
+                              "id": "91208612",
+                              "name": "Blueberry Baked Cheesecake Jar",
+                              "category": "Jar",
+                              "description": "Merry! That'S What Blueberry Baked Cheesecake Jars Make You",
+                              "imageId": "b02e34f9b87c8d3fa1e59d159d810a2c",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 28000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "type": "TopCarousel",
+                          "subtype": "image",
+                          "bannerId": "1261331",
+                          "creativeId": "TopPicks/NYBCc",
+                          "title": "New York Baked Cheesecake Slice",
+                          "description": " ",
+                          "fontColor": "#FFFFFF",
+                          "dish": {
+                            "info": {
+                              "id": "113915376",
+                              "name": "New York Baked Cheesecake Slice",
+                              "category": "Slices",
+                              "description": "Trust Us On The Classics! You'Ll Keep Coming Back For More!",
+                              "imageId": "a6a17b49e4dcd7bf2599f6ea2bfaed3f",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 25000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "type": "TopCarousel",
+                          "subtype": "image",
+                          "bannerId": "1260623",
+                          "creativeId": "TopPicks/BCMS",
+                          "title": "Belgian Chocolate Mousse Slice",
+                          "description": " ",
+                          "fontColor": "#FFFFFF",
+                          "dish": {
+                            "info": {
+                              "id": "91661300",
+                              "name": "Belgian Chocolate Mousse Slice",
+                              "category": "Slices",
+                              "description": "Time To Get In That Chocolate Kick Rolling!",
+                              "imageId": "2f0b0d8f115088062acd651cead6d00a",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 25000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                      "title": "Jar",
+                      "itemCards": [
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91208611",
+                              "name": "Tiramisu Jar",
+                              "category": "Jar",
+                              "description": "Deep Satisfying Layers Of Sponge With Just The Right Amount Of Coffee And Chocolate Drizzles",
+                              "imageId": "1afb1ba4b1e22e5f0cd9cb691b67ed9d",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 28000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true,
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.4",
+                                  "ratingCount": "71 ratings",
+                                  "ratingCountV2": "71"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91208612",
+                              "name": "Blueberry Baked Cheesecake Jar",
+                              "category": "Jar",
+                              "description": "Merry! That'S What Blueberry Baked Cheesecake Jars Make You",
+                              "imageId": "b02e34f9b87c8d3fa1e59d159d810a2c",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 28000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true,
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.7",
+                                  "ratingCount": "92 ratings",
+                                  "ratingCountV2": "92"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "92265429",
+                              "name": "Belgian Chocolate Mousse Jar",
+                              "category": "Jar",
+                              "description": "Classic, Earthy Flavours Welcome You In This Oh So Yum! Mousse Jar",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 25000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true,
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.8",
+                                  "ratingCount": "48 ratings",
+                                  "ratingCountV2": "48"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "92265433",
+                              "name": "Chocolate Tiramisu Jar",
+                              "category": "Jar",
+                              "description": "Our Tiramisu Just Got Tastier With A Splash Of Chocolate. No Trick Only Treat!",
+                              "imageId": "6218ea2e54d29d27112b3752f636baf3",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 28000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.9",
+                                  "ratingCount": "16 ratings",
+                                  "ratingCountV2": "16"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "92265434",
+                              "name": "Gourmet Chocolate Truffle Jar",
+                              "category": "Jar",
+                              "description": "Dig Into Rich Truffle Flavours To Satisfy Your Child-Like Cravings For All Things Chocolate",
+                              "imageId": "a57e87a8eb092592b7561f717fd01277",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 24000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.7",
+                                  "ratingCount": "14 ratings",
+                                  "ratingCountV2": "14"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "92265438",
+                              "name": "Nutella Mousse Jar",
+                              "category": "Jar",
+                              "description": "Happiness Is Only A Nutella Mousse Jar Away",
+                              "imageId": "09d31dcf57eb294ae34c6337d18476ae",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 32000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.6",
+                                  "ratingCount": "13 ratings",
+                                  "ratingCountV2": "13"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "92265440",
+                              "name": "Red Velvet Cake Jar",
+                              "category": "Jar",
+                              "description": "Presenting The Spongy Red Velvet Cake To Instantly Pick Up Your Mood",
+                              "imageId": "14d928b3a4ae61226a2d3a63b85e00fb",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 25000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "3.7",
+                                  "ratingCount": "9 ratings",
+                                  "ratingCountV2": "9"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "92265441",
+                              "name": "Strawberry Baked Cheesecake Jar",
+                              "category": "Jar",
+                              "description": "Fresh, Tangy, Sweet, Moist, Authentic - A Punch Of Flavours Await You Here",
+                              "imageId": "7ae6f59085f775974719b72cff168d7d",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 28000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.7",
+                                  "ratingCount": "18 ratings",
+                                  "ratingCountV2": "18"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113450260",
+                              "name": "Red Velvet Cheesecake Jar",
+                              "category": "Jar",
+                              "description": "Lingers, Dances & Finally Melts On The Tongue - Sooooo Good!",
+                              "imageId": "11f209fa625520ddfe989dbc8967468e",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 28000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.8",
+                                  "ratingCount": "4 ratings",
+                                  "ratingCountV2": "4"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915360",
+                              "name": "Brownie Baked Cheesecake Jar",
+                              "category": "Jar",
+                              "description": "Let'S Get Rid Of All Those \"Frownies\" With Our High On Brownie Cheesecakes",
+                              "imageId": "ee096585cb0aff81fd46da1bcf8be100",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 28000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "3.9",
+                                  "ratingCount": "17 ratings",
+                                  "ratingCountV2": "17"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915361",
+                              "name": "Lotus Biscoff Baked Cheesecake Jar",
+                              "category": "Jar",
+                              "description": "Smooth & Dense Cheesecake Jar For Caramelization-Crazy Sweet-Tooths",
+                              "imageId": "6dd0b17e20e49863396b5edde51719f1",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 35000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true,
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.7",
+                                  "ratingCount": "32 ratings",
+                                  "ratingCountV2": "32"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915362",
+                              "name": "New York Cheesecake Jar",
+                              "category": "Jar",
+                              "description": "No-Frills Here! Pick This Jar For Its Unique Texture And Flavours",
+                              "imageId": "93285936db3ac99858acf09d711a9fdc",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 26000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true,
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.6",
+                                  "ratingCount": "35 ratings",
+                                  "ratingCountV2": "35"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915363",
+                              "name": "Nutella Baked Cheesecake Jar",
+                              "category": "Jar",
+                              "description": "Drooolllllll - The Only Emotion  Nutella Based Cheesecakes Create",
+                              "imageId": "a07792b7921a379366a31b426aacf212",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 32000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.3",
+                                  "ratingCount": "7 ratings",
+                                  "ratingCountV2": "7"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915364",
+                              "name": "Rainbow Jar",
+                              "category": "Jar",
+                              "description": "Who Doesn'T Love Layers Of Moist, Colourful, Edible Goodness?",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 28000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "2.4",
+                                  "ratingCount": "3 ratings",
+                                  "ratingCountV2": "3"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915365",
+                              "name": "Triple Chocolate Mousse Jar",
+                              "category": "Jar",
+                              "description": "No Amount Of Chocolate Is Ever Enough! This Jar Proudly Backs This Truth.",
+                              "imageId": "525a9733e1238d0e591230690f552586",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 35000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915370",
+                              "name": "German Black Forest Jar",
+                              "category": "Jar",
+                              "description": "A Century Old Dessert From Germany Loaded With Sour Cherries To Make You Jiggle Wiggle",
+                              "imageId": "44bdfdd8a066e108dcab8a38ed357a25",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 20000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915371",
+                              "name": "Mix Berry Jar",
+                              "category": "Jar",
+                              "description": "A Mix That Promises Your Sweet-Tooth A Fix! Go For It",
+                              "imageId": "8eba27bc9bf79be451c827dad5cd214d",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 20000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915373",
+                              "name": "Pineapple Jar",
+                              "category": "Jar",
+                              "description": "The Sweet, Tarty Pineapple Just Found Its Way To Our Jar",
+                              "imageId": "bf9ead5960e3f3d8d939d9099118b9a4",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 20000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "115793253",
+                              "name": "Pineapple Baked Cheesecake Jar",
+                              "category": "Jar",
+                              "imageId": "f47b061cbe2c49cf8b2c9a8cfa61ebf5",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 28000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                      "title": "Cake",
+                      "itemCards": [
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661270",
+                              "name": "Belgian Chocolate Mousse 1 Kg",
+                              "category": "Cake",
+                              "imageId": "ae6240919bc68fae151431f6a53c7127",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 110000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "3.2",
+                                  "ratingCount": "4 ratings",
+                                  "ratingCountV2": "4"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661275",
+                              "name": "Blueberry Baked Cheesecake",
+                              "category": "Cake",
+                              "description": "Blueberries Just Got Comforting As They Came In With Our Cheesecake",
+                              "imageId": "6bce29c87a298ac4fb7e084daad940a8",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "variants": {},
+                              "variantsV2": {
+                                "variantGroups": [
+                                  {
+                                    "groupId": "26276910",
+                                    "name": "Quantity",
+                                    "variations": [
+                                      {
+                                        "name": "1Kg",
+                                        "price": 1500,
+                                        "default": 1,
+                                        "id": "83324016",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      },
+                                      {
+                                        "name": "Half Kg",
+                                        "price": 850,
+                                        "id": "83324017",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "pricingModels": [
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276910",
+                                        "variationId": "83324016"
+                                      }
+                                    ],
+                                    "price": 150000
+                                  },
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276910",
+                                        "variationId": "83324017"
+                                      }
+                                    ],
+                                    "price": 85000
+                                  }
+                                ]
+                              },
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "defaultPrice": 150000,
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.7",
+                                  "ratingCount": "34 ratings",
+                                  "ratingCountV2": "34"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661285",
+                              "name": "New York Baked Cheesecake",
+                              "category": "Cake",
+                              "description": "No Compromise On Classics! Bestseller Alert",
+                              "imageId": "360292753154cc415fed2ca50969f2f2",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "variants": {},
+                              "variantsV2": {
+                                "variantGroups": [
+                                  {
+                                    "groupId": "26276914",
+                                    "name": "Quantity",
+                                    "variations": [
+                                      {
+                                        "name": "1Kg",
+                                        "price": 1500,
+                                        "default": 1,
+                                        "id": "83324024",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      },
+                                      {
+                                        "name": "Half Kg",
+                                        "price": 850,
+                                        "id": "83324025",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "pricingModels": [
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276914",
+                                        "variationId": "83324024"
+                                      }
+                                    ],
+                                    "price": 150000
+                                  },
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276914",
+                                        "variationId": "83324025"
+                                      }
+                                    ],
+                                    "price": 85000
+                                  }
+                                ]
+                              },
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "defaultPrice": 150000,
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.4",
+                                  "ratingCount": "16 ratings",
+                                  "ratingCountV2": "16"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661290",
+                              "name": "Rainbow Cake Half Kg",
+                              "category": "Cake",
+                              "description": "Sprinkling Just The Right Amount Of Colors In Your Life. Brightning Up Your Days And How",
+                              "imageId": "c6676b5a655a16caef53d7554e306427",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 75000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.4",
+                                  "ratingCount": "28 ratings",
+                                  "ratingCountV2": "28"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661294",
+                              "name": "Strawberry Baked Cheesecake",
+                              "category": "Cake",
+                              "description": "Just One Word \"Lip-Smacking\". Take Our Word For It",
+                              "imageId": "5361ba8bef07af49876a2bc550566870",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "variants": {},
+                              "variantsV2": {
+                                "variantGroups": [
+                                  {
+                                    "groupId": "26276917",
+                                    "name": "Quantity",
+                                    "variations": [
+                                      {
+                                        "name": "1Kg",
+                                        "price": 1500,
+                                        "default": 1,
+                                        "id": "83324030",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      },
+                                      {
+                                        "name": "Half Kg",
+                                        "price": 850,
+                                        "id": "83324031",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "pricingModels": [
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276917",
+                                        "variationId": "83324030"
+                                      }
+                                    ],
+                                    "price": 150000
+                                  },
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276917",
+                                        "variationId": "83324031"
+                                      }
+                                    ],
+                                    "price": 85000
+                                  }
+                                ]
+                              },
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "defaultPrice": 150000,
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "3.8",
+                                  "ratingCount": "7 ratings",
+                                  "ratingCountV2": "7"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915346",
+                              "name": "Belgian Chocolate Mousse Cake (half Kg)",
+                              "category": "Cake",
+                              "description": "Here To Add That \"Yum\" Factor To Your Mousse Cake Cravings",
+                              "imageId": "e78d81ed5683abbe9a799c0dedec0f6a",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 60000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.7",
+                                  "ratingCount": "13 ratings",
+                                  "ratingCountV2": "13"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915347",
+                              "name": "Brownie Baked Cheesecake",
+                              "category": "Cake",
+                              "description": "Brownie baked cheesecake to beat days that seem super downie",
+                              "imageId": "7f6edde625481bb32c1e83c7a1336737",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "variants": {},
+                              "variantsV2": {
+                                "variantGroups": [
+                                  {
+                                    "groupId": "26276911",
+                                    "name": "Quantity",
+                                    "variations": [
+                                      {
+                                        "name": "1Kg",
+                                        "price": 1500,
+                                        "default": 1,
+                                        "id": "83324018",
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      },
+                                      {
+                                        "name": "Half Kg",
+                                        "price": 850,
+                                        "id": "83324019",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "pricingModels": [
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276911",
+                                        "variationId": "83324018"
+                                      }
+                                    ],
+                                    "price": 150000
+                                  },
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276911",
+                                        "variationId": "83324019"
+                                      }
+                                    ],
+                                    "price": 85000
+                                  }
+                                ]
+                              },
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "defaultPrice": 150000,
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "3.7",
+                                  "ratingCount": "4 ratings",
+                                  "ratingCountV2": "4"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915348",
+                              "name": "Gourmet Chocolate Truffle Cake",
+                              "category": "Cake",
+                              "description": "Spoiling You With Options And How! Gourmet Chocolate Truffle = Royalty",
+                              "imageId": "251c51384fab2217dc65570f642d5b20",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "variants": {},
+                              "variantsV2": {
+                                "variantGroups": [
+                                  {
+                                    "groupId": "26276912",
+                                    "name": "Quantity",
+                                    "variations": [
+                                      {
+                                        "name": "1Kg",
+                                        "price": 1100,
+                                        "default": 1,
+                                        "id": "83324020",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      },
+                                      {
+                                        "name": "Half Kg",
+                                        "price": 600,
+                                        "id": "83324021",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "pricingModels": [
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276912",
+                                        "variationId": "83324020"
+                                      }
+                                    ],
+                                    "price": 110000
+                                  },
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276912",
+                                        "variationId": "83324021"
+                                      }
+                                    ],
+                                    "price": 60000
+                                  }
+                                ]
+                              },
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "defaultPrice": 110000,
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915349",
+                              "name": "Kitkat Cake (half Kg)",
+                              "category": "Cake",
+                              "description": "Let'S Take A Break And Dig Into The Kitkat Cake. Are You Ready?",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 75000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915350",
+                              "name": "Lotus Biscoff Baked Cheesecake",
+                              "category": "Cake",
+                              "description": "Hyping Things Up With A Dose Of The Celebrated Lotus Biscoff",
+                              "imageId": "f08efbae23f8563f8b21865d258c6fa2",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "variants": {},
+                              "variantsV2": {
+                                "variantGroups": [
+                                  {
+                                    "groupId": "26276913",
+                                    "name": "Quantity",
+                                    "variations": [
+                                      {
+                                        "name": "1Kg",
+                                        "price": 1800,
+                                        "default": 1,
+                                        "id": "83324022",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      },
+                                      {
+                                        "name": "Half Kg",
+                                        "price": 1000,
+                                        "id": "83324023",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "pricingModels": [
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276913",
+                                        "variationId": "83324022"
+                                      }
+                                    ],
+                                    "price": 180000
+                                  },
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276913",
+                                        "variationId": "83324023"
+                                      }
+                                    ],
+                                    "price": 100000
+                                  }
+                                ]
+                              },
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "defaultPrice": 180000,
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "5.0",
+                                  "ratingCount": "6 ratings",
+                                  "ratingCountV2": "6"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915351",
+                              "name": "Milk Chocolate Truffle Cake (half Kg)",
+                              "category": "Cake",
+                              "description": "Classic Sweet Treat For Milk Chocolate Fans",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 60000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "2.7",
+                                  "ratingCount": "3 ratings",
+                                  "ratingCountV2": "3"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915352",
+                              "name": "Nutella Baked Cheesecake (half Kg)",
+                              "category": "Cake",
+                              "description": "This One'S For You If You Love Nutella To The Moon And Back",
+                              "imageId": "41550f5a8672e649549d89f84e5ca231",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 100000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915353",
+                              "name": "Nutella Baked Cheesecake 1 Kg",
+                              "category": "Cake",
+                              "description": "This One'S For You If You Love Nutella To The Moon And Back",
+                              "imageId": "c7acb3029440509aef78947ea63bd7ba",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 180000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915354",
+                              "name": "Nutella Mousse Cake",
+                              "category": "Cake",
+                              "description": "Just Order! You Don'T Need A Reason To Savor On Nutella",
+                              "imageId": "de9b12ddec96870d58ba106533976d47",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "variants": {},
+                              "variantsV2": {
+                                "variantGroups": [
+                                  {
+                                    "groupId": "26276915",
+                                    "name": "Quantity",
+                                    "variations": [
+                                      {
+                                        "name": "1Kg",
+                                        "price": 1300,
+                                        "default": 1,
+                                        "id": "83324026",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      },
+                                      {
+                                        "name": "Half Kg",
+                                        "price": 800,
+                                        "id": "83324027",
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "pricingModels": [
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276915",
+                                        "variationId": "83324026"
+                                      }
+                                    ],
+                                    "price": 130000
+                                  },
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276915",
+                                        "variationId": "83324027"
+                                      }
+                                    ],
+                                    "price": 80000
+                                  }
+                                ]
+                              },
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "defaultPrice": 130000,
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915355",
+                              "name": "Rainbow Cake 1 Kg",
+                              "category": "Cake",
+                              "imageId": "764d4db11cd958a5d43d2bc5d44ac3f6",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 150000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915356",
+                              "name": "Red Velvet Cake",
+                              "category": "Cake",
+                              "description": "You Don'T Need An Occasion To Order In Our Red Velvet Cake. Mark Our Words.",
+                              "imageId": "0d2fde423ed4056fae20476ccce0d6e1",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "variants": {},
+                              "variantsV2": {
+                                "variantGroups": [
+                                  {
+                                    "groupId": "26276916",
+                                    "name": "Quantity",
+                                    "variations": [
+                                      {
+                                        "name": "1Kg",
+                                        "price": 1100,
+                                        "default": 1,
+                                        "id": "83324028",
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      },
+                                      {
+                                        "name": "Half Kg",
+                                        "price": 600,
+                                        "id": "83324029",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "pricingModels": [
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276916",
+                                        "variationId": "83324028"
+                                      }
+                                    ],
+                                    "price": 110000
+                                  },
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276916",
+                                        "variationId": "83324029"
+                                      }
+                                    ],
+                                    "price": 60000
+                                  }
+                                ]
+                              },
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "defaultPrice": 110000,
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "5.0",
+                                  "ratingCount": "3 ratings",
+                                  "ratingCountV2": "3"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915358",
+                              "name": "Tiramisu Cake",
+                              "category": "Cake",
+                              "description": "Transporting You To The Streets Of Italy With Our Authentic Tiramisu Cake",
+                              "imageId": "2eb95ddf66ce264fe6efa436ed352f50",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "variants": {},
+                              "variantsV2": {
+                                "variantGroups": [
+                                  {
+                                    "groupId": "26276918",
+                                    "name": "Quantity",
+                                    "variations": [
+                                      {
+                                        "name": "1Kg",
+                                        "price": 1500,
+                                        "default": 1,
+                                        "id": "83324032",
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      },
+                                      {
+                                        "name": "Half Kg",
+                                        "price": 850,
+                                        "id": "83324033",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "pricingModels": [
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276918",
+                                        "variationId": "83324032"
+                                      }
+                                    ],
+                                    "price": 150000
+                                  },
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "26276918",
+                                        "variationId": "83324033"
+                                      }
+                                    ],
+                                    "price": 85000
+                                  }
+                                ]
+                              },
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "defaultPrice": 150000,
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915366",
+                              "name": "Chocolate Tiramisu Half Kg",
+                              "category": "Cake",
+                              "description": "Your Favourite Chocolate Just Found Its Way In The Traditional Tiramisu! Delightful Isn'T It?",
+                              "imageId": "14b7ff365117a44f5083ae37a49d4b90",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 85000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915369",
+                              "name": "German Black Forest Half Kg",
+                              "category": "Cake",
+                              "description": "German Black Forest Cake In Its Most Authentic Form Delivered Right At Your Doorstep",
+                              "imageId": "be1a001f2ea336e947540c4e14ff7421",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 65000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915372",
+                              "name": "Pineapple Cake Half Kg",
+                              "category": "Cake",
+                              "description": "Fruity Cake Lovers Are In For A Surprise In This Pineapple Delight!!",
+                              "imageId": "fa72f4e9d8de4a1438365fd702899f87",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 65000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "115793255",
+                              "name": "Pineapple Baked Cheesecake",
+                              "category": "Cake",
+                              "imageId": "b17eff82276818da94b99e648a3350ab",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "variants": {},
+                              "variantsV2": {
+                                "variantGroups": [
+                                  {
+                                    "groupId": "27622990",
+                                    "name": "Quantity",
+                                    "variations": [
+                                      {
+                                        "name": "1Kg",
+                                        "price": 1500,
+                                        "default": 1,
+                                        "id": "87359165",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      },
+                                      {
+                                        "name": "Half Kg",
+                                        "price": 850,
+                                        "id": "87359166",
+                                        "inStock": 1,
+                                        "isVeg": 1,
+                                        "isEnabled": 1
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "pricingModels": [
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "27622990",
+                                        "variationId": "87359165"
+                                      }
+                                    ],
+                                    "price": 150000
+                                  },
+                                  {
+                                    "variations": [
+                                      {
+                                        "groupId": "27622990",
+                                        "variationId": "87359166"
+                                      }
+                                    ],
+                                    "price": 85000
+                                  }
+                                ]
+                              },
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "defaultPrice": 150000,
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "118090385",
+                              "name": "Chocolate Tiramisu Cake 1 Kg",
+                              "category": "Cake",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 150000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                      "title": "Slices",
+                      "itemCards": [
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91208604",
+                              "name": "Blueberry Baked Cheesecake Slice",
+                              "category": "Slices",
+                              "description": "Berry Berry So Very Merry! Dig In Now!",
+                              "imageId": "ba901d04a426ee282c71169fb1e088c3",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 25000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true,
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.6",
+                                  "ratingCount": "227 ratings",
+                                  "ratingCountV2": "227"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661300",
+                              "name": "Belgian Chocolate Mousse Slice",
+                              "category": "Slices",
+                              "description": "Time To Get In That Chocolate Kick Rolling!",
+                              "imageId": "2f0b0d8f115088062acd651cead6d00a",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 25000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true,
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.7",
+                                  "ratingCount": "79 ratings",
+                                  "ratingCountV2": "79"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661302",
+                              "name": "Brownie Cheesecake Slice",
+                              "category": "Slices",
+                              "description": "You Asked For A Brownie Cheesecake! Without A Second Thought We Made Your Dream A Reality",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 25000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.9",
+                                  "ratingCount": "11 ratings",
+                                  "ratingCountV2": "11"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661304",
+                              "name": "Chocolate Tiramisu Slice",
+                              "category": "Slices",
+                              "description": "Best Of All Worlds Come Together In This Slice Of Wholesomeness! Delicious!!",
+                              "imageId": "ec0a2b60e3e089f4daf8a1c2974b2a78",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 25000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.1",
+                                  "ratingCount": "11 ratings",
+                                  "ratingCountV2": "11"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661308",
+                              "name": "Red Velvet Slice",
+                              "category": "Slices",
+                              "description": "Alert! Cream Cheese Frosting Worth Dying For",
+                              "imageId": "c6850fe6ec5f6ccc527d3071683e3adc",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 15000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "3.1",
+                                  "ratingCount": "17 ratings",
+                                  "ratingCountV2": "17"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661309",
+                              "name": "Strawberry Baked Cheesecake Slice",
+                              "category": "Slices",
+                              "description": "Strawberry Lovers Are In For A Surprise! Spreading Berryness And How",
+                              "imageId": "72f6bf3a2b621d50609bd3090285b1c8",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 25000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.4",
+                                  "ratingCount": "46 ratings",
+                                  "ratingCountV2": "46"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113450264",
+                              "name": "Nutella Mousse Slice",
+                              "category": "Slices",
+                              "description": "A Dense Nutella Loaded Mousse Slice Should Do The Trick. It'S A Catch.",
+                              "imageId": "6b6dd7fd0c7de1d3a94c014d81b911dd",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 28000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.6",
+                                  "ratingCount": "8 ratings",
+                                  "ratingCountV2": "8"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915374",
+                              "name": "Gourmet Chocolate Truffle Slice",
+                              "category": "Slices",
+                              "description": "Never Too Late, Never Too Old For Gourmet Chocolate Truffle. Isn'T It?",
+                              "imageId": "7355209db73219af7bda3b7a90045080",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 15000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.7",
+                                  "ratingCount": "22 ratings",
+                                  "ratingCountV2": "22"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915375",
+                              "name": "Lotus Biscoff Baked Cheesecake Slice",
+                              "category": "Slices",
+                              "description": "Caramelized Cravings Taken Care Here. It'S A Promise",
+                              "imageId": "ad58e72645c93b766a46bfa2cbfc9761",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 30000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true,
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.5",
+                                  "ratingCount": "74 ratings",
+                                  "ratingCountV2": "74"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915376",
+                              "name": "New York Baked Cheesecake Slice",
+                              "category": "Slices",
+                              "description": "Trust Us On The Classics! You'Ll Keep Coming Back For More!",
+                              "imageId": "a6a17b49e4dcd7bf2599f6ea2bfaed3f",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 25000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true,
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.5",
+                                  "ratingCount": "68 ratings",
+                                  "ratingCountV2": "68"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915377",
+                              "name": "Nutella Baked Cheesecake Slice",
+                              "category": "Slices",
+                              "description": "We Know You Love Nutella, You Love Our Cheesecakes Which Means You'Ll Love This Drool-Worthy Combo Too",
+                              "imageId": "772b4f4dcc7a9e1be08f349b6e793d5e",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 30000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {
+                                "text": "Bestseller",
+                                "textColor": "#ffffff",
+                                "topBackgroundColor": "#d53d4c",
+                                "bottomBackgroundColor": "#b02331"
+                              },
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "isBestseller": true,
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.5",
+                                  "ratingCount": "42 ratings",
+                                  "ratingCountV2": "42"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915378",
+                              "name": "Rainbow Slice",
+                              "category": "Slices",
+                              "description": "As Satisfying As The Drops Of The First Rainfall! Go For It",
+                              "imageId": "1d25b2019816287de89445c3f0a5b291",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 25000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.7",
+                                  "ratingCount": "6 ratings",
+                                  "ratingCountV2": "6"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "115793256",
+                              "name": "Pineapple Baked Cheesecake Slice",
+                              "category": "Slices",
+                              "imageId": "5eb3973171b0ecc950e28b5486b446db",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 25000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                      "title": "Brownies",
+                      "itemCards": [
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661259",
+                              "name": "Chocolate Fudge Brownie",
+                              "category": "Brownies",
+                              "description": "Yum! Yum! Yum! & Some More Yum! Yum!",
+                              "imageId": "79d5d88b53705b8642743e10e13db387",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 11900,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.5",
+                                  "ratingCount": "29 ratings",
+                                  "ratingCountV2": "29"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661260",
+                              "name": "Classic Brownie",
+                              "category": "Brownies",
+                              "description": "You Asked For A Classic Brownie. We Delivered.",
+                              "imageId": "90af717f5d4b1fd6cd51ea96e8237c2c",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 9900,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.0",
+                                  "ratingCount": "22 ratings",
+                                  "ratingCountV2": "22"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661262",
+                              "name": "Kit-kat Brownie",
+                              "category": "Brownies",
+                              "description": "Breaks Are Good! Whoever Said So Was Sooooo Right.",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 14900,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661264",
+                              "name": "Milk Chocolate Brownie",
+                              "category": "Brownies",
+                              "description": "This One'S On The Menu For A Reason. The Reason Is You",
+                              "imageId": "74375758418c6d5419c10aa5be022878",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 14900,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661269",
+                              "name": "White Chocolate Brownie",
+                              "category": "Brownies",
+                              "description": "Ditching The Usual With A Dash Of White Chocolate",
+                              "imageId": "65f3479df9425f75fb8739296d3ad330",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 14900,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113450250",
+                              "name": "Nutella Brownie",
+                              "category": "Brownies",
+                              "description": "Wherever You Go, Our Nutella Brownie Follows",
+                              "imageId": "6f1fb11d1b487d20a065f2923ef43c46",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 17900,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "3.6",
+                                  "ratingCount": "9 ratings",
+                                  "ratingCountV2": "9"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "113915345",
+                              "name": "Assorted Brownies Box(4 No.)",
+                              "category": "Brownies",
+                              "description": "The Brownie Is In Your Court! Pick Your Top 4",
+                              "imageId": "8b17172c09569278980d3c4f5a796f93",
+                              "inStock": 1,
+                              "isVeg": 1,
+                              "price": 70000,
+                              "variants": {},
+                              "variantsV2": {},
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {}
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        },
+                        {
+                          "card": {
+                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                            "info": {
+                              "id": "91661263",
+                              "name": "Lotus Biscoff Brownie",
+                              "category": "Brownies",
+                              "description": "Crunchy, Distinctive Experiences Await You Here!",
+                              "imageId": "d900c53bf1c244e7a3af0b82a69e258c",
+                              "isVeg": 1,
+                              "price": 19900,
+                              "variants": {},
+                              "variantsV2": {},
+                              "nextAvailableAtMessage": "Next available at 3:57 pm, tomorrow",
+                              "itemAttribute": {
+                                "vegClassifier": "VEG"
+                              },
+                              "ribbon": {},
+                              "type": "ITEM",
+                              "itemBadge": {},
+                              "badgesV2": {},
+                              "ratings": {
+                                "aggregatedRating": {
+                                  "rating": "4.5",
+                                  "ratingCount": "9 ratings",
+                                  "ratingCountV2": "9"
+                                }
+                              }
+                            },
+                            "analytics": {},
+                            "hideRestaurantDetails": true
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.RestaurantLicenseInfo",
+                      "type": "FSSAI",
+                      "imageId": "fssai_final_edss9i",
+                      "text": ["License No. 11222302000432"]
+                    }
+                  }
+                },
+                {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.RestaurantAddress",
+                      "name": "Cheesecake & Co.",
+                      "area": "Koramangala",
+                      "completeAddress": "PROPERTY NO. 9/C, 3RD MAIN OPP,  KORAMANGALA POLICE STATION  BANGALORE, , Bangalore South, Bangalore  Urban, Karnataka"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "firstOffsetRequest": true,
+    "isQCLink": false
+  },
+  "tid": "07867972-dec3-4d79-9a02-4a648f5f7af3",
+  "sid": "9ej14437-a2fd-443a-b821-47efa6b28cdd",
+  "deviceId": "13bea758-8807-b801-cf7d-c58c7550ffff",
+  "csrfToken": "8zToC8KsdJP5-GNLf9h0Mmubse-Tlgsz-ueDUvy8"
+}

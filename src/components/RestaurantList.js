@@ -44,6 +44,7 @@ const RestaurantList = () => {
   return (
     <>
       <input
+        data-testid="search"
         className="w-60 ml-4 p-1 border-solid border-darkgray border-2"
         type="search"
         placeholder="Search"

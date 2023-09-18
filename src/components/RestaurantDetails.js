@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import Offers from "./Offers";
 import RestaurantInfo from "./RestaurantInfo";
 import useRestaurantDetails from "../utils/useRestaurantDetails";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import MenuItem from "./MenuItem";
 
 const RestaurantDetails = () => {
@@ -46,7 +46,7 @@ const RestaurantDetails = () => {
               let veg = card?.card?.card?.itemCards.filter((item) => {
                 if (item?.card?.info?.isVeg) return item;
               });
-              console.log(veg);
+
               return (
                 <div key={card.card.card.title} className="item-container">
                   <div className="w-9/12 mx-auto sm:w-11/12 sm:mx-4">

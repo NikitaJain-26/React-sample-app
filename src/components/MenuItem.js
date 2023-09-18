@@ -46,6 +46,7 @@ const MenuItem = ({ items, resId, restaurantName }) => {
         );
         return (
           <div
+          data-testid="items"
             key={id}
             className="flex sm:w-full min-h-[145] justify-between px-2 py-0 my-2 text-sm hover:shadow-sm hover:shadow-gray-400 border-b-[1px] border-gray-200 border-solid"
           >
