@@ -1,6 +1,10 @@
+import { useState } from "react";
 import SignUp from "../components/SignUp";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import { UserContext } from "../utils/UserContext";
+
+
 it("Should render Sign Up component with 3 input", () => {
   render(<SignUp />);
 
@@ -23,4 +27,12 @@ it("Should render Sign Up component with Create button", () => {
   const createButton = screen.getByText("Create");
 
   expect(createButton).toBeInTheDocument();
+});
+
+it("Should render Sign Up component with password input", () => {
+  render(<SignUp />);
+
+  const passwordInput = screen.getByText(/Create Password/);
+
+  expect(passwordInput).toBeInTheDocument();
 });

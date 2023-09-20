@@ -101,5 +101,88 @@ test("should add items to cart page on add button click", async () => {
 
   expect(screen.getByText(/Cart2/)).toBeInTheDocument();
   const menuItems = screen.getAllByTestId("items");
+  expect(menuItems.length).toBe(21);
+});
+
+test("should increase item count on +ss click", async () => {
+  await act(async () => {
+    render(
+      <BrowserRouter>
+        <Provider store={appStore}>
+          <Header />
+          <RestaurantDetails />
+          <Cart />
+        </Provider>
+      </BrowserRouter>
+    );
+  });
+
+  const recommendText = screen.getByText("Jar (19)");
+
+  fireEvent.click(recommendText);
+
+  const addButtons = screen.getAllByRole("button", { name: "Add +" });
+
+  fireEvent.click(addButtons[0]);
+
+  const addButton = screen.getAllByTestId("addButton");
+  fireEvent.click(addButton[0]);
+  expect(screen.getByText(/Cart3/)).toBeInTheDocument();
+  const menuItems = screen.getAllByTestId("items");
   expect(menuItems.length).toBe(22);
+});
+
+test("should remove item from cart on - click", async () => {
+  await act(async () => {
+    render(
+      <BrowserRouter>
+        <Provider store={appStore}>
+          <Header />
+          <RestaurantDetails />
+          <Cart />
+        </Provider>
+      </BrowserRouter>
+    );
+  });
+
+  const recommendText = screen.getByText("Jar (19)");
+
+  fireEvent.click(recommendText);
+
+  const addButtons = screen.getAllByRole("button", { name: "Add +" });
+
+  fireEvent.click(addButtons[0]);
+
+  const removeButton = screen.getAllByTestId("removeButton");
+  fireEvent.click(removeButton[0]);
+  expect(screen.getByText(/Cart4/)).toBeInTheDocument();
+  const menuItems = screen.getAllByTestId("items");
+  expect(menuItems.length).toBe(23);
+});
+
+test("should remove all items from cart on - click", async () => {
+  await act(async () => {
+    render(
+      <BrowserRouter>
+        <Provider store={appStore}>
+          <Header />
+          <RestaurantDetails />
+          <Cart />
+        </Provider>
+      </BrowserRouter>
+    );
+  });
+
+  const recommendText = screen.getByText("Jar (19)");
+
+  fireEvent.click(recommendText);
+
+  const addButtons = screen.getAllByRole("button", { name: "Add +" });
+
+  fireEvent.click(addButtons[0]);
+
+  const removeButton = screen.getAllByTestId("removeButton");
+  fireEvent.click(removeButton[0]);
+  const menuItems = screen.getAllByTestId("items");
+  expect(menuItems.length).toBe(23);
 });

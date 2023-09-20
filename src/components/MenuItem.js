@@ -46,7 +46,7 @@ const MenuItem = ({ items, resId, restaurantName }) => {
         );
         return (
           <div
-          data-testid="items"
+            data-testid="items"
             key={id}
             className="flex sm:w-full min-h-[145] justify-between px-2 py-0 my-2 text-sm hover:shadow-sm hover:shadow-gray-400 border-b-[1px] border-gray-200 border-solid"
           >
@@ -93,6 +93,7 @@ const MenuItem = ({ items, resId, restaurantName }) => {
               ) : (
                 <div className="flex absolute mt-[6rem] mx-4 p-1 px-2 w-20 justify-between text-sm text-green-700 rounded-sm shadow-lg shadow-gray-300">
                   <button
+                    data-testid="removeButton"
                     className="p-1 px-2 w-2 "
                     onClick={() => onRemoveClick(item.count ? item.item : item)}
                   >
@@ -100,6 +101,7 @@ const MenuItem = ({ items, resId, restaurantName }) => {
                   </button>
                   <div className="p-1 px-2 w-2">{itemCount}</div>
                   <button
+                    data-testid="addButton"
                     className="p-1 px-2 w-2"
                     onClick={() => onAddClick(item.count ? item.item : item)}
                   >

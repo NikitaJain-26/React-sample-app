@@ -34,7 +34,7 @@ const RestaurantDetails = () => {
         </div>
       )}
       <div className="w-9/12 mx-auto py-4">
-        <label for="isVeg" className="pr-5 text-green-900 font-bold">
+        <label htmlFor="isVeg" className="pr-5 text-green-900 font-bold">
           Veg
         </label>
         <input type="checkbox" id="isVeg" onClick={(e) => onIsVegClick(e)} />

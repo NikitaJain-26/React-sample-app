@@ -127,6 +127,7 @@ const SignUp = () => {
               </label>
             </div>
             <input
+              data-testid="firstName"
               id="firstName"
               type="text"
               className="bg-gray-200 h-8 w-60 rounded-sm p-2"
@@ -147,6 +148,7 @@ const SignUp = () => {
               </label>
             </div>
             <input
+              data-testid="lastName"
               id="lastName"
               type="text"
               className="bg-gray-200 h-8 w-60 rounded-sm p-2"
@@ -167,6 +169,7 @@ const SignUp = () => {
               </label>
             </div>
             <input
+              data-testid="email"
               id="email"
               type="email"
               className="bg-gray-200 h-8 w-60 rounded-sm p-2"
@@ -187,6 +190,7 @@ const SignUp = () => {
               </label>
             </div>
             <input
+              data-testid="password"
               id="password"
               type="password"
               className="bg-gray-200 h-8 w-60 rounded-sm p-2"
