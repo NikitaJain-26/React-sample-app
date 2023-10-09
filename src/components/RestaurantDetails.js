@@ -29,7 +29,7 @@ const RestaurantDetails = () => {
       {offers.length <= 0 ? null : (
         <div className="flex border-b-[1px] w-9/12 mx-auto sm:w-11/12 sm:mx-4 border-gray-500 border-dotted sm:flex-wrap">
           {offers.map((offer) => {
-            return <Offers key={offers?.info?.offerIds[0]} offer={offer} />;
+            return <Offers key={offer?.info?.couponCode} offer={offer} />;
           })}
         </div>
       )}
