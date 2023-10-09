@@ -14,6 +14,7 @@ This is a sample food delivery app to showcase the understanding of react concep
 - React-redux
 - App Testing
 
+## App Features
 - Home Page
   ![Home page](/public/HomePage.PNG)
 
