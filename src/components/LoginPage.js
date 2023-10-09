@@ -83,7 +83,7 @@ const LoginPage = () => {
           </Link>
         </div>
       ) : signedInSuccessfully ? (
-        <div className="w-3/12 mx-auto text-center">
+        <div className="w-3/12 mx-auto text-center md:w-full md:mx-4">
           <p className="p-4">Signed In successfully</p>
           <p className="p-2">
             Welcome {loggedInUser.firstName + " " + loggedInUser.lastName}
@@ -96,7 +96,7 @@ const LoginPage = () => {
           </button>
         </div>
       ) : (
-        <div className="w-3/12 mx-auto">
+        <div className="w-3/12 mx-auto md:w-full md:mx-4">
           <div className="m-4 mb-0">
             <div className="py-2">
               <label htmlFor="email" className="font-bold ">
@@ -136,7 +136,7 @@ const LoginPage = () => {
               </div>
             )}
           </div>
-          <div className="flex justify-between ml-4">
+          <div className="flex justify-between ml-4 md:w-9/12">
             <button
               className="p-1 bg-orange-400 rounded-md text-white font-bold"
               onClick={() => onSignInClick()}

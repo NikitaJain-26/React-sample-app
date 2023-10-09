@@ -93,7 +93,7 @@ const SignUp = () => {
   return (
     <>
       {userAlreadyExist ? (
-        <div className="w-3/12 mx-auto text-center">
+        <div className="w-3/12 mx-auto text-center md:w-full md:mx-4">
           <p className="p-4">
             Please SignUp with other email. This email already exist.
           </p>
@@ -109,7 +109,7 @@ const SignUp = () => {
           </Link>
         </div>
       ) : accountCreated ? (
-        <div className="w-3/12 mx-auto text-center">
+        <div className="w-3/12 mx-auto text-center md:w-full md:mx-4">
           <p className="p-4">Account created successfully please sign in</p>
           <Link
             to="/login"
@@ -119,7 +119,7 @@ const SignUp = () => {
           </Link>
         </div>
       ) : (
-        <div className="w-3/12 mx-auto">
+        <div className="w-3/12 mx-auto md:w-full md:mx-4">
           <div className="mx-4">
             <div className="py-2">
               <label htmlFor="firstName" className="font-bold ">
@@ -130,7 +130,7 @@ const SignUp = () => {
               data-testid="firstName"
               id="firstName"
               type="text"
-              className="bg-gray-200 h-8 w-60 rounded-sm p-2"
+              className="bg-gray-200 h-8 w-60 rounded-sm p-2 md:w-80"
               value={firstName}
               required
               onChange={(e) => {
@@ -151,7 +151,7 @@ const SignUp = () => {
               data-testid="lastName"
               id="lastName"
               type="text"
-              className="bg-gray-200 h-8 w-60 rounded-sm p-2"
+              className="bg-gray-200 h-8 w-60 rounded-sm p-2 md:w-80"
               value={lastName}
               required
               onChange={(e) => {
@@ -172,7 +172,7 @@ const SignUp = () => {
               data-testid="email"
               id="email"
               type="email"
-              className="bg-gray-200 h-8 w-60 rounded-sm p-2"
+              className="bg-gray-200 h-8 w-60 rounded-sm p-2 md:w-80"
               value={email}
               required
               onChange={(e) => onHandleChange(e)}
@@ -193,7 +193,7 @@ const SignUp = () => {
               data-testid="password"
               id="password"
               type="password"
-              className="bg-gray-200 h-8 w-60 rounded-sm p-2"
+              className="bg-gray-200 h-8 w-60 rounded-sm p-2 md:w-80"
               value={password}
               required
               minLength={8}
@@ -205,7 +205,7 @@ const SignUp = () => {
               </div>
             )}
           </div>
-          <div className="mx-28 my-2">
+          <div className="mx-28 my-2 md:mx-40">
             <button
               className="p-2 bg-orange-400 rounded-md text-white font-bold"
               onClick={() => onSignUpClick()}
