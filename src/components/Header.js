@@ -1,15 +1,15 @@
 import { LOGO_URL } from "../utils/constant";
 import { useContext, useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import LoggedInUserContext from "../utils/loggedInUserContext";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { clearCart } from "../utils/redux/cartSlice";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const { loggedInUser, setLogInUser } = useContext(LoggedInUserContext);
   const onMenuIconClick = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,6 +17,7 @@ const Header = () => {
   const cart = useSelector((store) => store.cart);
   const onlineStatus = useOnlineStatus();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -25,7 +26,9 @@ const Header = () => {
         navigate("/");
       } else {
         setLogInUser({});
-        navigate("/login");
+        dispatch(clearCart());
+        console.log(cart.items);
+        navigate("/");
       }
     });
   }, []);

@@ -5,9 +5,10 @@
   "source": "index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build",
+    "build": "parcel build index.html --public-url ./",
     "test": "jest",
-    "watch-test": "jest --watch"
+    "watch-test": "jest --watch",
+    "clear-build-cache": "rm -rf .cache/ dist/"
   },
   "repository": {
     "type": "git",
