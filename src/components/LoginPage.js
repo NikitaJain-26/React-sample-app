@@ -79,10 +79,10 @@ const Login = () => {
 
   return (
     <div className="">
-      <div className="absolute top-10 left-32 w-4/12 mx-60 bg-opacity-80 rounded-sm p-4 mb-4">
+      <div className="w-6/12 mx-auto rounded-sm">
         {loggedInUser.displayName !== undefined ? (
-          <div className="py-5 px-5 ">
-            <p className="px-24 py-5">Welcome {loggedInUser.displayName}</p>
+          <div className="py-5 px-5 text-center">
+            <p className="px-2 py-5">Welcome {loggedInUser.displayName}</p>
             <button
               onClick={() => OnSignOutClick()}
               className="w-11/12 bg-orange-400 p-3 m-4 text-white rounded-lg font-bold"

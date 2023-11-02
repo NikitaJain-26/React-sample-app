@@ -143,11 +143,11 @@ const Header = () => {
       {isMenuOpen && (
         <ul className="">
           <li className="m-2 border-solid border-b-[1px] border-gray-400">
-            {loggedInUser.firstName == undefined ? (
+            {loggedInUser.displayName == undefined ? (
               <Link to="/login">Sign In</Link>
             ) : (
               <Link to="/login">
-                <div>{loggedInUser.firstName}</div>
+                <div>{loggedInUser.displayName}</div>
               </Link>
             )}
           </li>
