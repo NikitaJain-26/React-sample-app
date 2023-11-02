@@ -13,8 +13,10 @@ This is a sample food delivery app to showcase the understanding of react concep
 - React Life cycle
 - React-redux
 - App Testing
+- Firebase Authentication
 
 ## App Features
+
 - Home Page
   ![Home page](/public/HomePage.PNG)
 
@@ -29,9 +31,3 @@ This is a sample food delivery app to showcase the understanding of react concep
 
 - Login Page
   ![login page](/public/LoginPage.PNG)
-
-- Sign Up Page
-  ![Sign Up Page](/public/SignUpPage.PNG)
-
-- Successfull sign in page
-  ![Successfull sign in page](/public//SucessfullSignIn.PNG)
