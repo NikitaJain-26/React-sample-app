@@ -1,19 +1,34 @@
 import { LOGO_URL } from "../utils/constant";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import LoggedInUserContext from "../utils/loggedInUserContext";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const { loggedInUser } = useContext(LoggedInUserContext);
+  const { loggedInUser, setLogInUser } = useContext(LoggedInUserContext);
   const onMenuIconClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   const cart = useSelector((store) => store.cart);
   const onlineStatus = useOnlineStatus();
+  const navigate = useNavigate();
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const { uid, displayName, email } = user;
+        setLogInUser({ displayName: displayName, email: email, uid: uid });
+        navigate("/");
+      } else {
+        setLogInUser({});
+        navigate("/login");
+      }
+    });
+  }, []);
   return (
     <>
       <div className="flex justify-between m-4 px-2 py-0 border border-1">
@@ -60,7 +75,7 @@ const Header = () => {
             </li>
           </ul>
 
-          {loggedInUser.firstName == undefined ? (
+          {loggedInUser.displayName == undefined ? (
             <Link to="/login" className="flex">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +93,7 @@ const Header = () => {
             </Link>
           ) : (
             <Link to="/login">
-              <div>{loggedInUser.firstName}</div>
+              <div>{loggedInUser.displayName}</div>
             </Link>
           )}
         </div>

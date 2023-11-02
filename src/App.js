@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import RestaurantList from "./components/RestaurantList";
@@ -7,27 +7,23 @@ import Error from "./components/Error";
 //import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import RestaurantDetails from "./components/RestaurantDetails";
-import { UserContext } from "./utils/UserContext";
 import Cart from "./components/Cart";
 import LoginPage from "./components/LoginPage";
-import SignUp from "./components/signUp";
 import LoggedInUserContext from "./utils/loggedInUserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/redux/appStore";
 const App = () => {
-  const [userDetails, setUserDetails] = useState([]);
   const [logInUser, setLogInUser] = useState({});
+
   return (
     <>
       <Provider store={appStore}>
-        <UserContext.Provider value={{ userData: userDetails, setUserDetails }}>
-          <LoggedInUserContext.Provider
-            value={{ loggedInUser: logInUser, setLogInUser }}
-          >
-            <Header />
-            <Outlet />
-          </LoggedInUserContext.Provider>
-        </UserContext.Provider>
+        <LoggedInUserContext.Provider
+          value={{ loggedInUser: logInUser, setLogInUser }}
+        >
+          <Header />
+          <Outlet />
+        </LoggedInUserContext.Provider>
       </Provider>
     </>
   );
@@ -66,10 +62,6 @@ const appRouter = createBrowserRouter([
       {
         path: "/login",
         element: <LoginPage />,
-      },
-      {
-        path: "/signUp",
-        element: <SignUp />,
       },
     ],
     errorElement: <Error />,
